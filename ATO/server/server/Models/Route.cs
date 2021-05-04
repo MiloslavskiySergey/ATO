@@ -8,19 +8,19 @@ namespace server.Models
 {
 	public class Route
 	{
-		public int id { get; set; }
+		public int Id { get; set; }
 		[Required]
 
-		public string start { get; set; } = default!;
+		public string Start { get; set; } = default!;
 		[Required, StringLength(30)]
 
-		public string target { get; set; } = default!;
+		public string Target { get; set; } = default!;
 		[Required, StringLength(30)]
 
-		public decimal price { get; set; } = default!;
+		public decimal Price { get; set; } = default!;
 		[Required, StringLength(10)]
 
-		public int time { get; set; } = default!;
+		public int Time { get; set; } = default!;
 		[Required, StringLength(5)]
 
 		public ICollection<Flight> Flights { get; set; } = new List<Flight>();

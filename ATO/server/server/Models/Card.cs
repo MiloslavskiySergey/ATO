@@ -14,7 +14,7 @@ namespace server.Models
 		public string Name { get; set; } = default!;
 		[Required, StringLength(30)]
 
-		public string Percent { get; set; } = default!;
+		public int Percent { get; set; } = default!;
 		[Required, StringLength(3)]
 
 		public ICollection<Order> Orders { get; set; } = new List<Order>();

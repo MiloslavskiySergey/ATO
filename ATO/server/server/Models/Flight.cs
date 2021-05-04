@@ -8,25 +8,25 @@ namespace server.Models
 {
 	public class Flight
 	{
-		public int id { get; set; }
+		public int Id { get; set; }
 		[Required]
 
 		//нужно как то отделить
-		public DateTime date_start { get; set; } = default!;
+		public DateTime Date_start { get; set; } = default!;
 		[Required]
 
-		public DateTime time_start { get; set; } = default!;
+		public DateTime Time_start { get; set; } = default!;
 		[Required]
 
-		public bool isActive { get; set; } = default!;
+		public bool IsActive { get; set; } = default!;
 		
-		public int route_id { get; set; }
+		public int Route_id { get; set; }
 		[Required]
-		public Route route { get; set; } = default!;
+		public Route Route { get; set; } = default!;
 
-		public int air_id { get; set; }
+		public int Air_id { get; set; }
 		[Required]
-		public Air air { get; set; } = default!;
+		public Air Air { get; set; } = default!;
 
 		public ICollection<Order> Orders { get; set; } = new List<Order>();
 	}
