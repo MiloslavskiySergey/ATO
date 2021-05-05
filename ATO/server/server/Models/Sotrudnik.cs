@@ -9,25 +9,24 @@ namespace server.Models
 	public class Sotrudnik
 	{
 		public int Id { get; set; }
-		[Required]
 
+		[Required, StringLength(30)]
 		public string Last_name { get; set; } = default!;
-		[Required, StringLength(30)]
 
+		[Required, StringLength(30)]
 		public string Name { get; set; } = default!;
-		[Required, StringLength(30)]
 
+		[Required, StringLength(30)]
 		public string Sur_name { get; set; } = default!;
-		[Required, StringLength(30)]
 
+		[Required, StringLength(30)]
 		public string Addres { get; set; } = default!;
-		[Required, StringLength(30)]
 
+		[Required, StringLength(30)]
 		public string Phone { get; set; } = default!;
-		[Required, StringLength(30)]
 
-		public int Stage { get; set; } = default!;
-		[Required, StringLength(30)]
+		[Required, StringLength(3)]
+		public int Stage { get; set; }
 
 		public ICollection<Air> Airs { get; set; } = new List<Air>();
 	}

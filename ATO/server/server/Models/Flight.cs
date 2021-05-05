@@ -9,23 +9,23 @@ namespace server.Models
 	public class Flight
 	{
 		public int Id { get; set; }
-		[Required]
 
+		[Required]
 		//нужно как то отделить
-		public DateTime Date_start { get; set; } = default!;
-		[Required]
+		public DateTime Date_start { get; set; } = DateTime.Today;
 
-		public DateTime Time_start { get; set; } = default!;
 		[Required]
+		public DateTime Time_start { get; set; } = DateTime.Today;
 
-		public bool IsActive { get; set; } = default!;
-		
+		[Required]
+		public bool IsActive { get; set; } = false;
+
+		[Required]
 		public int Route_id { get; set; }
-		[Required]
 		public Route Route { get; set; } = default!;
 
-		public int Air_id { get; set; }
 		[Required]
+		public int Air_id { get; set; }
 		public Air Air { get; set; } = default!;
 
 		public ICollection<Order> Orders { get; set; } = new List<Order>();

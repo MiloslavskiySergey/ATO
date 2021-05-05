@@ -9,24 +9,23 @@ namespace server.Models
 	public class Order
 	{
 		public int Id { get; set; }
-		[Required]
 
-		public string Mesto { get; set; } = default!;
 		[Required, StringLength(30)]
+		public string Mesto { get; set; } = default!;
 
-		public int Counts { get; set; } = default!;
 		[Required, StringLength(6)]
+		public int Counts { get; set; }
 
-		public int Flight_id { get; set; }
 		[Required]
+		public int Flight_id { get; set; }
 		public Flight Flight { get; set; } = default!;
 
-		public int Client_id { get; set; }
 		[Required]
+		public int Client_id { get; set; }
 		public Client Client { get; set; } = default!;
 
-		public int Card_id { get; set; }
 		[Required]
+		public int Card_id { get; set; }
 		public Card Card { get; set; } = default!;
 	}
 }

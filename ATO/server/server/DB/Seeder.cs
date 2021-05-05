@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using server.Models;
 using System.Collections.Generic;
+using System;
 
 
 namespace server.DB
@@ -16,7 +17,7 @@ namespace server.DB
 					Id = 1,
 					Bort_number = "RU2415115",
 					Model = "Boing-747",
-					Date_create = 01.06.2005,
+					//Date_create = 1 / 6 / 2005,
 					Life_time = 20,
 					IsActive = true,
 					Seats = 200,
@@ -27,7 +28,7 @@ namespace server.DB
 					Id = 2,
 					Bort_number = "RU2354251",
 					Model = "Boing-747",
-					Date_create = 01.06.2005,
+					//Date_create = 01.06.2005,
 					Life_time = 25,
 					IsActive = true,
 					Seats = 250,
@@ -38,7 +39,7 @@ namespace server.DB
 					Id = 3,
 					Bort_number = "RU252521",
 					Model = "Ty-134",
-					Date_create = 01.06.2010,
+					//Date_create = 01.06.2010,
 					Life_time = 25,
 					IsActive = false,
 					Seats = 199,
@@ -87,8 +88,8 @@ namespace server.DB
 				new Flight
 				{
 					Id = 1,
-					Date_start = 20.12.2019,
-					Time_start = 16:00,
+					//Date_start = 20.12.2019,
+					//Time_start = 16:00,
 					IsActive = false,
 					Air_id = 1,
 					Route_id = 1
@@ -96,8 +97,8 @@ namespace server.DB
 				new Flight
 				{
 					Id = 2,
-					Date_start = 20.12.2019,
-					Time_start = 13:00,
+					//Date_start = 20.12.2019,
+					//Time_start = 13:00,
 					IsActive = false,
 					Air_id = 2,
 					Route_id = 2
@@ -105,8 +106,8 @@ namespace server.DB
 				new Flight
 				{
 					Id = 3,
-					Date_start = 19.12.2019,
-					Time_start = 12:00,
+					//Date_start = 19.12.2019,
+					//Time_start = 12:00,
 					IsActive = false,
 					Air_id = 3,
 					Route_id = 3
@@ -114,8 +115,8 @@ namespace server.DB
 				new Flight
 				{
 					Id = 4,
-					Date_start = 27.12.2019,
-					Time_start = 12:00,
+					//Date_start = 27.12.2019,
+					//Time_start = 12:00,
 					IsActive = true,
 					Air_id = 2,
 					Route_id = 3

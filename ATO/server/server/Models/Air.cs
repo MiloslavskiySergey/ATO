@@ -9,28 +9,27 @@ namespace server.Models
 	public class Air
 	{
 		public int Id { get; set; }
-		[Required]
 
+		[Required, StringLength(10)]
 		public string Bort_number { get; set; } = default!;
-		[Required, StringLength(10)]
 
+		[Required, StringLength(10)]
 		public string Model { get; set; } = default!;
-		[Required, StringLength(10)]
 
-		public DateTime Date_create { get; set; } = default!;
 		[Required]
+		public DateTime Date_create { get; set; } = DateTime.Today;
 
-		public int Life_time { get; set; } = default!;
 		[Required, StringLength(10)]
+		public int Life_time { get; set; }
 
-		public int Seats { get; set; } = default!;
 		[Required]
+		public int Seats { get; set; }
 
-		public bool IsActive { get; set; } = default!;
 		[Required, StringLength(5)]
+		public bool IsActive { get; set; } = false;
 
-		public int Sotrudnik_id { get; set; }
 		[Required]
+		public int Sotrudnik_id { get; set; }
 		public Sotrudnik Sotrudnik { get; set; } = default!;
 
 		public ICollection<Flight> Flights { get; set; } = new List<Flight>();
