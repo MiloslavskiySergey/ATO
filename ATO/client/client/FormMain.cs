@@ -22,7 +22,7 @@ namespace client
 
 		private void btnOrderTicket_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			//this.Hide();
 			FormOrderTicket formOrderTicket = new FormOrderTicket();
 			formOrderTicket.Show();
 		}

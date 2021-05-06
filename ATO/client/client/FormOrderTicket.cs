@@ -17,14 +17,14 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Hide();
-			FormMain formMain = new FormMain();
-			formMain.Show();
+			this.Close();
 		}
 
 		private void FormOrderTicket_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			Application.Exit();
+			FormOrderTicket formOrderTicket = new FormOrderTicket();
+			formOrderTicket.Close();
+			//Application.Exit();
 		}
 	}
 }

@@ -29,6 +29,8 @@ namespace client
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministration));
 			this.btnRoute = new System.Windows.Forms.Button();
 			this.btnFlight = new System.Windows.Forms.Button();
 			this.btnSotrudnik = new System.Windows.Forms.Button();
@@ -36,6 +38,7 @@ namespace client
 			this.btnControlFlight = new System.Windows.Forms.Button();
 			this.btnSellTicket = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
 			// btnRoute
@@ -100,11 +103,11 @@ namespace client
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(146, 267);
+			this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+			this.btnCancel.Location = new System.Drawing.Point(201, 267);
 			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(165, 23);
+			this.btnCancel.Size = new System.Drawing.Size(50, 50);
 			this.btnCancel.TabIndex = 6;
-			this.btnCancel.Text = "Назад";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
@@ -120,10 +123,12 @@ namespace client
 			this.Controls.Add(this.btnSotrudnik);
 			this.Controls.Add(this.btnFlight);
 			this.Controls.Add(this.btnRoute);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormAdministration";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Администрирование";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAdministration_FormClosed);
+			this.Load += new System.EventHandler(this.FormAdministration_Load);
 			this.ResumeLayout(false);
 
 		}
@@ -137,5 +142,6 @@ namespace client
 		private System.Windows.Forms.Button btnControlFlight;
 		private System.Windows.Forms.Button btnSellTicket;
 		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.ToolTip toolTip;
 	}
 }

@@ -40,6 +40,7 @@ namespace client
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnOrderTicket = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,6 +61,8 @@ namespace client
 			this.btnAdministration = new System.Windows.Forms.Button();
 			this.lblUser = new System.Windows.Forms.Label();
 			this.lblUserName = new System.Windows.Forms.Label();
+			this.btnClearSearch = new System.Windows.Forms.Button();
+			this.btnHistoryOrder = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridFlightClient)).BeginInit();
 			this.SuspendLayout();
@@ -75,7 +78,7 @@ namespace client
 			// 
 			// btnOrderTicket
 			// 
-			this.btnOrderTicket.Location = new System.Drawing.Point(346, 113);
+			this.btnOrderTicket.Location = new System.Drawing.Point(346, 125);
 			this.btnOrderTicket.Name = "btnOrderTicket";
 			this.btnOrderTicket.Size = new System.Drawing.Size(122, 23);
 			this.btnOrderTicket.TabIndex = 2;
@@ -91,7 +94,7 @@ namespace client
 			this.groupBox1.Controls.Add(this.textBox1);
 			this.groupBox1.Location = new System.Drawing.Point(12, 38);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(328, 98);
+			this.groupBox1.Size = new System.Drawing.Size(328, 109);
 			this.groupBox1.TabIndex = 5;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Поиск";
@@ -270,11 +273,31 @@ namespace client
 			this.lblUserName.Size = new System.Drawing.Size(0, 15);
 			this.lblUserName.TabIndex = 10;
 			// 
+			// btnClearSearch
+			// 
+			this.btnClearSearch.Location = new System.Drawing.Point(346, 67);
+			this.btnClearSearch.Name = "btnClearSearch";
+			this.btnClearSearch.Size = new System.Drawing.Size(122, 23);
+			this.btnClearSearch.TabIndex = 11;
+			this.btnClearSearch.Text = "Сброс";
+			this.btnClearSearch.UseVisualStyleBackColor = true;
+			// 
+			// btnHistoryOrder
+			// 
+			this.btnHistoryOrder.Location = new System.Drawing.Point(346, 96);
+			this.btnHistoryOrder.Name = "btnHistoryOrder";
+			this.btnHistoryOrder.Size = new System.Drawing.Size(122, 23);
+			this.btnHistoryOrder.TabIndex = 12;
+			this.btnHistoryOrder.Text = "История заказов";
+			this.btnHistoryOrder.UseVisualStyleBackColor = true;
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(977, 572);
+			this.Controls.Add(this.btnHistoryOrder);
+			this.Controls.Add(this.btnClearSearch);
 			this.Controls.Add(this.lblUserName);
 			this.Controls.Add(this.lblUser);
 			this.Controls.Add(this.btnAdministration);
@@ -283,6 +306,7 @@ namespace client
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.btnOrderTicket);
 			this.Controls.Add(this.label1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FormMain";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Главная форма";
@@ -317,5 +341,7 @@ namespace client
 		private System.Windows.Forms.DataGridViewTextBoxColumn RouteTarget;
 		private System.Windows.Forms.DataGridViewTextBoxColumn TimeFlight;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FreePlaces;
+		private System.Windows.Forms.Button btnClearSearch;
+		private System.Windows.Forms.Button btnHistoryOrder;
 	}
 }
