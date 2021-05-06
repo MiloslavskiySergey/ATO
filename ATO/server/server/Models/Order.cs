@@ -17,15 +17,15 @@ namespace server.Models
 		public int Counts { get; set; }
 
 		[Required]
-		public int Flight_id { get; set; }
+		public int FlightId { get; set; }
 		public Flight Flight { get; set; } = default!;
 
 		[Required]
-		public int Client_id { get; set; }
+		public int ClientId { get; set; }
 		public Client Client { get; set; } = default!;
 
 		[Required]
-		public int Card_id { get; set; }
+		public int CardId { get; set; }
 		public Card Card { get; set; } = default!;
 	}
 }

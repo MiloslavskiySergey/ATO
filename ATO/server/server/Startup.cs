@@ -102,13 +102,13 @@ namespace server
 
 			//services.AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("Default")));
 			services.AddScoped<IAdapter>(x => new EFCoreAdapter<int>(x.GetRequiredService<ApplicationDbContext>()));
-			services.AddScoped(x => new Enforcer("./Casbin/auth_model.conf", x.GetRequiredService<IAdapter>()));
+			//services.AddScoped(x => new Enforcer("./Casbin/auth_model.conf", x.GetRequiredService<IAdapter>()));
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
-				app.UseDeveloperExceptionPage();
+				app.UseMiniProfiler();
 			app.UseRouting();
 			app.UseAuthentication();
 			//app.UseAuthorization();

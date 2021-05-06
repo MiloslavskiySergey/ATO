@@ -15,35 +15,35 @@ namespace server.DB
 				new Air
 				{
 					Id = 1,
-					Bort_number = "RU2415115",
+					BortNumber = "RU2415115",
 					Model = "Boing-747",
 					//Date_create = 1 / 6 / 2005,
-					Life_time = 20,
+					LifeTime = 20,
 					IsActive = true,
 					Seats = 200,
-					Sotrudnik_id = 1
+					SotrudnikId = 1
 				},
 				new Air
 				{
 					Id = 2,
-					Bort_number = "RU2354251",
+					BortNumber = "RU2354251",
 					Model = "Boing-747",
 					//Date_create = 01.06.2005,
-					Life_time = 25,
+					LifeTime = 25,
 					IsActive = true,
 					Seats = 250,
-					Sotrudnik_id = 2
+					SotrudnikId = 2
 				},
 				new Air
 				{
 					Id = 3,
-					Bort_number = "RU252521",
+					BortNumber = "RU252521",
 					Model = "Ty-134",
 					//Date_create = 01.06.2010,
-					Life_time = 25,
+					LifeTime = 25,
 					IsActive = false,
 					Seats = 199,
-					Sotrudnik_id = 3
+					SotrudnikId = 3
 				}
 				);
 			modelBuilder.Entity<Card>().HasData(
@@ -64,22 +64,22 @@ namespace server.DB
 				new Client
 				{
 					Id = 1,
-					Last_name = "Макушев",
+					LastName = "Макушев",
 					Name = "Сергей",
-					Sur_name = "Иванович",
-					Passport_seia = 2423,
-					Passport_number = 242342,
+					SurName = "Иванович",
+					PassportSeia = 2423,
+					PassportNumber = 242342,
 					Addres = "Smolensk",
 					Phone = "812345678"
 				},
 				new Client
 				{
 					Id = 2,
-					Last_name = "Татарин",
+					LastName = "Татарин",
 					Name = "Иван",
-					Sur_name = "Степанович",
-					Passport_seia = 4646,
-					Passport_number = 535353,
+					SurName = "Степанович",
+					PassportSeia = 4646,
+					PassportNumber = 535353,
 					Addres = "Smolensk",
 					Phone = "8856564545"
 				}
@@ -91,8 +91,8 @@ namespace server.DB
 					//Date_start = 20.12.2019,
 					//Time_start = 16:00,
 					IsActive = false,
-					Air_id = 1,
-					Route_id = 1
+					AirId = 1,
+					RouteId = 1
 				},
 				new Flight
 				{
@@ -100,8 +100,8 @@ namespace server.DB
 					//Date_start = 20.12.2019,
 					//Time_start = 13:00,
 					IsActive = false,
-					Air_id = 2,
-					Route_id = 2
+					AirId = 2,
+					RouteId = 2
 				},
 				new Flight
 				{
@@ -109,8 +109,8 @@ namespace server.DB
 					//Date_start = 19.12.2019,
 					//Time_start = 12:00,
 					IsActive = false,
-					Air_id = 3,
-					Route_id = 3
+					AirId = 3,
+					RouteId = 3
 				},
 				new Flight
 				{
@@ -118,8 +118,8 @@ namespace server.DB
 					//Date_start = 27.12.2019,
 					//Time_start = 12:00,
 					IsActive = true,
-					Air_id = 2,
-					Route_id = 3
+					AirId = 2,
+					RouteId = 3
 				}
 				);
 			modelBuilder.Entity<Order>().HasData(
@@ -128,27 +128,27 @@ namespace server.DB
 					Id = 5,
 					Mesto = "1",
 					Counts = 1,
-					Flight_id = 1,
-					Client_id = 1,
-					Card_id = 1
+					FlightId = 1,
+					ClientId = 1,
+					CardId = 1
 				},
 				new Order
 				{
 					Id = 6,
 					Mesto = "2",
 					Counts = 1,
-					Flight_id = 1,
-					Client_id = 1,
-					Card_id = 2
+					FlightId = 1,
+					ClientId = 1,
+					CardId = 2
 				},
 				new Order
 				{
 					Id = 7,
 					Mesto = "3",
 					Counts = 1,
-					Flight_id = 4,
-					Client_id = 1,
-					Card_id = 1
+					FlightId = 4,
+					ClientId = 1,
+					CardId = 1
 				}
 				);
 			modelBuilder.Entity<Route>().HasData(

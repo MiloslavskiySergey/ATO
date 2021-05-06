@@ -20,12 +20,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Air>> GetAirs([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "airs", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "airs", "read"))
 				return context.Airs;
 			throw new System.Exception();
 		}
@@ -36,12 +36,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Card>> GetCards([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "cards", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "cards", "read"))
 				return context.Cards;
 			throw new System.Exception();
 		}
@@ -52,12 +52,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Client>> GetClients([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "clients", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "clients", "read"))
 				return context.Clients;
 			throw new System.Exception();
 		}
@@ -68,12 +68,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Flight>> GetFlights([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "flights", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "flights", "read"))
 				return context.Flights;
 			throw new System.Exception();
 		}
@@ -84,12 +84,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Order>> GetOrders([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "orders", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "orders", "read"))
 				return context.Orders;
 			throw new System.Exception();
 		}
@@ -103,9 +103,9 @@ namespace server.Schema
 			[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "routes", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "routes", "read"))
 				return context.Routes;
 			throw new System.Exception();
 		}
@@ -116,12 +116,12 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Sotrudnik>> GetSotrudniks([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
-			var user = await identity.GetCurrentUser();
-			enforcer.LoadPolicy();
-			if (enforcer.Enforce(user.Id, "sotrudniks", "read"))
+			//var user = await identity.GetCurrentUser();
+			//enforcer.LoadPolicy();
+			//if (enforcer.Enforce(user.Id, "sotrudniks", "read"))
 				return context.Sotrudniks;
 			throw new System.Exception();
 		}

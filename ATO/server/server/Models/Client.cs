@@ -11,19 +11,19 @@ namespace server.Models
 		public int Id { get; set; }
 
 		[Required, StringLength(30)]
-		public string Last_name { get; set; } = default!;
+		public string LastName { get; set; } = default!;
 
 		[Required, StringLength(30)]
 		public string Name { get; set; } = default!;
 
 		[Required, StringLength(30)]
-		public string Sur_name { get; set; } = default!;
+		public string SurName { get; set; } = default!;
 
 		[Required, StringLength(4)]
-		public int Passport_seia { get; set; }
+		public int PassportSeia { get; set; }
 
 		[Required, StringLength(6)]
-		public int Passport_number { get; set; }
+		public int PassportNumber { get; set; }
 
 		[Required, StringLength(30)]
 		public string Addres { get; set; } = default!;

@@ -11,7 +11,7 @@ namespace server.Models
 		public int Id { get; set; }
 
 		[Required, StringLength(10)]
-		public string Bort_number { get; set; } = default!;
+		public string BortNumber { get; set; } = default!;
 
 		[Required, StringLength(10)]
 		public string Model { get; set; } = default!;
@@ -20,7 +20,7 @@ namespace server.Models
 		public DateTime Date_create { get; set; } = DateTime.Today;
 
 		[Required, StringLength(10)]
-		public int Life_time { get; set; }
+		public int LifeTime { get; set; }
 
 		[Required]
 		public int Seats { get; set; }
@@ -29,7 +29,7 @@ namespace server.Models
 		public bool IsActive { get; set; } = false;
 
 		[Required]
-		public int Sotrudnik_id { get; set; }
+		public int SotrudnikId { get; set; }
 		public Sotrudnik Sotrudnik { get; set; } = default!;
 
 		public ICollection<Flight> Flights { get; set; } = new List<Flight>();
