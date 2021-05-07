@@ -90,6 +90,7 @@ namespace client
 			this.btnAddSotrudnik.Size = new System.Drawing.Size(50, 50);
 			this.btnAddSotrudnik.TabIndex = 1;
 			this.btnAddSotrudnik.UseVisualStyleBackColor = true;
+			this.btnAddSotrudnik.Click += new System.EventHandler(this.btnAddSotrudnik_Click);
 			// 
 			// btnEditSotrudnik
 			// 
@@ -99,6 +100,7 @@ namespace client
 			this.btnEditSotrudnik.Size = new System.Drawing.Size(50, 50);
 			this.btnEditSotrudnik.TabIndex = 1;
 			this.btnEditSotrudnik.UseVisualStyleBackColor = true;
+			this.btnEditSotrudnik.Click += new System.EventHandler(this.btnEditSotrudnik_Click);
 			// 
 			// groupBox1
 			// 

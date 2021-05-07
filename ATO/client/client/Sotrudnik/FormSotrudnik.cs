@@ -1,4 +1,5 @@
-﻿using System;
+﻿using client.Sotrudnik;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,18 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск клиента");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+		}
+
+		private void btnAddSotrudnik_Click(object sender, EventArgs e)
+		{
+			FormAddSotrudnik formAddSotrudnik = new FormAddSotrudnik();
+			formAddSotrudnik.Show();
+		}
+
+		private void btnEditSotrudnik_Click(object sender, EventArgs e)
+		{
+			FormEditSotrudnik formEditSotrudnik = new FormEditSotrudnik();
+			formEditSotrudnik.Show();
 		}
 	}
 }

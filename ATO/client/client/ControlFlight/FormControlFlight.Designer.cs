@@ -90,6 +90,7 @@ namespace client
 			this.btnAddControlFlight.Size = new System.Drawing.Size(50, 50);
 			this.btnAddControlFlight.TabIndex = 1;
 			this.btnAddControlFlight.UseVisualStyleBackColor = true;
+			this.btnAddControlFlight.Click += new System.EventHandler(this.btnAddControlFlight_Click);
 			// 
 			// btnEditControlFlight
 			// 
@@ -99,6 +100,7 @@ namespace client
 			this.btnEditControlFlight.Size = new System.Drawing.Size(50, 50);
 			this.btnEditControlFlight.TabIndex = 1;
 			this.btnEditControlFlight.UseVisualStyleBackColor = true;
+			this.btnEditControlFlight.Click += new System.EventHandler(this.btnEditControlFlight_Click);
 			// 
 			// groupBox1
 			// 

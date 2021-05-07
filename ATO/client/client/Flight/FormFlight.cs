@@ -1,4 +1,5 @@
-﻿using System;
+﻿using client.Flight;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,18 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск клиента");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+		}
+
+		private void btnAddFlight_Click(object sender, EventArgs e)
+		{
+			FormAddFlight formAddFlight = new FormAddFlight();
+			formAddFlight.Show();
+		}
+
+		private void btnEditFlight_Click(object sender, EventArgs e)
+		{
+			FormEditFlight formEditFlight = new FormEditFlight();
+			formEditFlight.Show();
 		}
 	}
 }
