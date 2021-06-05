@@ -17,7 +17,7 @@ namespace client
 		{
 			var services = new ServiceCollection();
 			services.
-				cnfclient()
+				AddGqlClient()
 				.ConfigureHttpClient(client => {
 					client.BaseAddress = new Uri("https://localhost:5001/");
 					client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", AccessToken);

@@ -3,8 +3,8 @@
   "documents": "**/*.graphql",
   "extensions": {
     "strawberryShake": {
-      "name": "cnfclient",
-      "namespace":  "client",
+      "name": "GqlClient",
+      "namespace": "client",
       "url": "https://localhost:5001/",
       "dependencyInjection": true,
       "strictSchemaValidation": true,
