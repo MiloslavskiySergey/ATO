@@ -1,0 +1,464 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  airs(first: Int after: String last: Int before: String where: AirFilterInput): AirConnection
+  cards(first: Int after: String last: Int before: String where: CardFilterInput): CardConnection
+  clients(first: Int after: String last: Int before: String where: ClientFilterInput): ClientConnection
+  flights(first: Int after: String last: Int before: String where: FlightFilterInput): FlightConnection
+  orders(first: Int after: String last: Int before: String where: OrderFilterInput): OrderConnection
+  routes(first: Int after: String last: Int before: String where: RouteFilterInput): RouteConnection
+  sotrudniks(first: Int after: String last: Int before: String where: SotrudnikFilterInput): SotrudnikConnection
+  me: User
+}
+
+type Mutation {
+  signUp(email: String! password: String!): Payload!
+  signIn(email: String! password: String!): LoginPayload!
+  signOut: Payload!
+}
+
+type Air {
+  id: Int!
+  bortNumber: String!
+  model: String!
+  date_create: DateTime!
+  lifeTime: Int!
+  seats: Int!
+  isActive: Boolean!
+  sotrudnikId: Int!
+  sotrudnik: Sotrudnik!
+  flights: [Flight!]!
+}
+
+type Card {
+  id: Int!
+  name: String!
+  percent: Int!
+  orders: [Order!]!
+}
+
+type Client {
+  id: Int!
+  lastName: String!
+  name: String!
+  surName: String!
+  passportSeia: Int!
+  passportNumber: Int!
+  addres: String!
+  phone: String!
+  orders: [Order!]!
+}
+
+type Flight {
+  id: Int!
+  dateStart: DateTime!
+  timeStart: DateTime!
+  isActive: Boolean!
+  routeId: Int!
+  route: Route!
+  airId: Int!
+  air: Air!
+  orders: [Order!]!
+}
+
+type Order {
+  id: Int!
+  mesto: String!
+  counts: Int!
+  flightId: Int!
+  flight: Flight!
+  clientId: Int!
+  client: Client!
+  cardId: Int!
+  card: Card!
+}
+
+type Route {
+  id: Int!
+  start: String!
+  target: String!
+  price: Decimal!
+  time: Int!
+  flights: [Flight!]!
+}
+
+type Sotrudnik {
+  id: Int!
+  last_name: String!
+  name: String!
+  sur_name: String!
+  addres: String!
+  phone: String!
+  stage: Int!
+  airs: [Air!]!
+}
+
+input AirFilterInput {
+  and: [AirFilterInput!]
+  or: [AirFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  bortNumber: StringOperationFilterInput
+  model: StringOperationFilterInput
+  date_create: ComparableDateTimeOperationFilterInput
+  lifeTime: ComparableInt32OperationFilterInput
+  seats: ComparableInt32OperationFilterInput
+  isActive: BooleanOperationFilterInput
+  sotrudnikId: ComparableInt32OperationFilterInput
+  sotrudnik: SotrudnikFilterInput
+  flights: ListFilterInputTypeOfFlightFilterInput
+}
+
+input CardFilterInput {
+  and: [CardFilterInput!]
+  or: [CardFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  name: StringOperationFilterInput
+  percent: ComparableInt32OperationFilterInput
+  orders: ListFilterInputTypeOfOrderFilterInput
+}
+
+input ClientFilterInput {
+  and: [ClientFilterInput!]
+  or: [ClientFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  lastName: StringOperationFilterInput
+  name: StringOperationFilterInput
+  surName: StringOperationFilterInput
+  passportSeia: ComparableInt32OperationFilterInput
+  passportNumber: ComparableInt32OperationFilterInput
+  addres: StringOperationFilterInput
+  phone: StringOperationFilterInput
+  orders: ListFilterInputTypeOfOrderFilterInput
+}
+
+input FlightFilterInput {
+  and: [FlightFilterInput!]
+  or: [FlightFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  dateStart: ComparableDateTimeOperationFilterInput
+  timeStart: ComparableDateTimeOperationFilterInput
+  isActive: BooleanOperationFilterInput
+  routeId: ComparableInt32OperationFilterInput
+  route: RouteFilterInput
+  airId: ComparableInt32OperationFilterInput
+  air: AirFilterInput
+  orders: ListFilterInputTypeOfOrderFilterInput
+}
+
+input OrderFilterInput {
+  and: [OrderFilterInput!]
+  or: [OrderFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  mesto: StringOperationFilterInput
+  counts: ComparableInt32OperationFilterInput
+  flightId: ComparableInt32OperationFilterInput
+  flight: FlightFilterInput
+  clientId: ComparableInt32OperationFilterInput
+  client: ClientFilterInput
+  cardId: ComparableInt32OperationFilterInput
+  card: CardFilterInput
+}
+
+input RouteFilterInput {
+  and: [RouteFilterInput!]
+  or: [RouteFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  start: StringOperationFilterInput
+  target: StringOperationFilterInput
+  price: ComparableDecimalOperationFilterInput
+  time: ComparableInt32OperationFilterInput
+  flights: ListFilterInputTypeOfFlightFilterInput
+}
+
+input SotrudnikFilterInput {
+  and: [SotrudnikFilterInput!]
+  or: [SotrudnikFilterInput!]
+  id: ComparableInt32OperationFilterInput
+  last_name: StringOperationFilterInput
+  name: StringOperationFilterInput
+  sur_name: StringOperationFilterInput
+  addres: StringOperationFilterInput
+  phone: StringOperationFilterInput
+  stage: ComparableInt32OperationFilterInput
+  airs: ListFilterInputTypeOfAirFilterInput
+}
+
+"A connection to a list of items."
+type AirConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [AirEdge!]
+  "A flattened list of the nodes."
+  nodes: [Air!]
+}
+
+"A connection to a list of items."
+type CardConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [CardEdge!]
+  "A flattened list of the nodes."
+  nodes: [Card!]
+}
+
+"A connection to a list of items."
+type ClientConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [ClientEdge!]
+  "A flattened list of the nodes."
+  nodes: [Client!]
+}
+
+"A connection to a list of items."
+type FlightConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [FlightEdge!]
+  "A flattened list of the nodes."
+  nodes: [Flight!]
+}
+
+"A connection to a list of items."
+type OrderConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [OrderEdge!]
+  "A flattened list of the nodes."
+  nodes: [Order!]
+}
+
+"A connection to a list of items."
+type RouteConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [RouteEdge!]
+  "A flattened list of the nodes."
+  nodes: [Route!]
+}
+
+"A connection to a list of items."
+type SotrudnikConnection {
+  "Information to aid in pagination."
+  pageInfo: PageInfo!
+  "A list of edges."
+  edges: [SotrudnikEdge!]
+  "A flattened list of the nodes."
+  nodes: [Sotrudnik!]
+}
+
+input ComparableInt32OperationFilterInput {
+  eq: Int
+  neq: Int
+  in: [Int!]
+  nin: [Int!]
+  gt: Int
+  ngt: Int
+  gte: Int
+  ngte: Int
+  lt: Int
+  nlt: Int
+  lte: Int
+  nlte: Int
+}
+
+input StringOperationFilterInput {
+  and: [StringOperationFilterInput!]
+  or: [StringOperationFilterInput!]
+  eq: String
+  neq: String
+  contains: String
+  ncontains: String
+  in: [String]
+  nin: [String]
+  startsWith: String
+  nstartsWith: String
+  endsWith: String
+  nendsWith: String
+}
+
+input ComparableDateTimeOperationFilterInput {
+  eq: DateTime
+  neq: DateTime
+  in: [DateTime!]
+  nin: [DateTime!]
+  gt: DateTime
+  ngt: DateTime
+  gte: DateTime
+  ngte: DateTime
+  lt: DateTime
+  nlt: DateTime
+  lte: DateTime
+  nlte: DateTime
+}
+
+input BooleanOperationFilterInput {
+  eq: Boolean
+  neq: Boolean
+}
+
+input ListFilterInputTypeOfFlightFilterInput {
+  all: FlightFilterInput
+  none: FlightFilterInput
+  some: FlightFilterInput
+  any: Boolean
+}
+
+input ListFilterInputTypeOfOrderFilterInput {
+  all: OrderFilterInput
+  none: OrderFilterInput
+  some: OrderFilterInput
+  any: Boolean
+}
+
+input ComparableDecimalOperationFilterInput {
+  eq: Decimal
+  neq: Decimal
+  in: [Decimal!]
+  nin: [Decimal!]
+  gt: Decimal
+  ngt: Decimal
+  gte: Decimal
+  ngte: Decimal
+  lt: Decimal
+  nlt: Decimal
+  lte: Decimal
+  nlte: Decimal
+}
+
+input ListFilterInputTypeOfAirFilterInput {
+  all: AirFilterInput
+  none: AirFilterInput
+  some: AirFilterInput
+  any: Boolean
+}
+
+"Information about pagination in a connection."
+type PageInfo {
+  "Indicates whether more edges exist following the set defined by the clients arguments."
+  hasNextPage: Boolean!
+  "Indicates whether more edges exist prior the set defined by the clients arguments."
+  hasPreviousPage: Boolean!
+  "When paginating backwards, the cursor to continue."
+  startCursor: String
+  "When paginating forwards, the cursor to continue."
+  endCursor: String
+}
+
+"An edge in a connection."
+type AirEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Air!
+}
+
+"An edge in a connection."
+type CardEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Card!
+}
+
+"An edge in a connection."
+type ClientEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Client!
+}
+
+"An edge in a connection."
+type FlightEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Flight!
+}
+
+"An edge in a connection."
+type OrderEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Order!
+}
+
+"An edge in a connection."
+type RouteEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Route!
+}
+
+"An edge in a connection."
+type SotrudnikEdge {
+  "A cursor for use in pagination."
+  cursor: String!
+  "The item at the end of the edge."
+  node: Sotrudnik!
+}
+
+type Payload {
+  success: Boolean!
+  errors: [Error!]
+}
+
+type User {
+  name: String
+  surname: String
+  patronymic: String
+  id: String
+  userName: String
+  normalizedUserName: String
+  email: String
+  normalizedEmail: String
+  emailConfirmed: Boolean!
+  securityStamp: String
+  concurrencyStamp: String
+  phoneNumber: String
+  phoneNumberConfirmed: Boolean!
+  twoFactorEnabled: Boolean!
+  lockoutEnd: DateTime
+  lockoutEnabled: Boolean!
+  accessFailedCount: Int!
+}
+
+type LoginPayload {
+  token: Token
+  success: Boolean!
+  errors: [Error!]
+}
+
+"The `DateTime` scalar represents an ISO-8601 compliant date time type."
+scalar DateTime
+
+"The built-in `Decimal` scalar type."
+scalar Decimal
+
+type Token {
+  id: Int!
+  refreshToken: String!
+  accessToken: String!
+  revoked: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  user_id: String!
+  user: User!
+}
+
+type Error {
+  field: String!
+  info: String!
+}

@@ -77,6 +77,7 @@ namespace client
 			// 
 			this.txtPasword.Location = new System.Drawing.Point(182, 111);
 			this.txtPasword.Name = "txtPasword";
+			this.txtPasword.PasswordChar = '*';
 			this.txtPasword.Size = new System.Drawing.Size(181, 23);
 			this.txtPasword.TabIndex = 4;
 			// 
