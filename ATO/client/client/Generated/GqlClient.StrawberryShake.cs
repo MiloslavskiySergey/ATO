@@ -709,6 +709,345 @@ namespace client
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsResult : global::System.IEquatable<GetClientsResult>, IGetClientsResult
+    {
+        public GetClientsResult(global::client.IGetClients_Clients? clients)
+        {
+            Clients = clients;
+        }
+
+        public global::client.IGetClients_Clients? Clients
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetClientsResult? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (((Clients is null && other.Clients is null) || Clients != null && Clients.Equals(other.Clients)));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetClientsResult)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Clients != null)
+                {
+                    hash ^= 397 * Clients.GetHashCode();
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClients_Clients_ClientConnection : global::System.IEquatable<GetClients_Clients_ClientConnection>, IGetClients_Clients_ClientConnection
+    {
+        public GetClients_Clients_ClientConnection(global::System.Collections.Generic.IReadOnlyList<global::client.IGetClients_Clients_Nodes>? nodes)
+        {
+            Nodes = nodes;
+        }
+
+        /// <summary>
+        /// A flattened list of the nodes.
+        /// </summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::client.IGetClients_Clients_Nodes>? Nodes
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetClients_Clients_ClientConnection? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(Nodes, other.Nodes));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetClients_Clients_ClientConnection)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Nodes != null)
+                {
+                    foreach (var Nodes_elm in Nodes)
+                    {
+                        hash ^= 397 * Nodes_elm.GetHashCode();
+                    }
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClients_Clients_Nodes_Client : global::System.IEquatable<GetClients_Clients_Nodes_Client>, IGetClients_Clients_Nodes_Client
+    {
+        public GetClients_Clients_Nodes_Client(global::System.Int32 id, global::System.String lastName, global::System.String name, global::System.String surName, global::System.String phone, global::System.String addres, global::System.Int32 passportSeia, global::System.Int32 passportNumber)
+        {
+            Id = id;
+            LastName = lastName;
+            Name = name;
+            SurName = surName;
+            Phone = phone;
+            Addres = addres;
+            PassportSeia = passportSeia;
+            PassportNumber = passportNumber;
+        }
+
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String LastName
+        {
+            get;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public global::System.String SurName
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportSeia
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportNumber
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetClients_Clients_Nodes_Client? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Id == other.Id) && LastName.Equals(other.LastName) && Name.Equals(other.Name) && SurName.Equals(other.SurName) && Phone.Equals(other.Phone) && Addres.Equals(other.Addres) && PassportSeia == other.PassportSeia && PassportNumber == other.PassportNumber;
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetClients_Clients_Nodes_Client)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Id.GetHashCode();
+                hash ^= 397 * LastName.GetHashCode();
+                hash ^= 397 * Name.GetHashCode();
+                hash ^= 397 * SurName.GetHashCode();
+                hash ^= 397 * Phone.GetHashCode();
+                hash ^= 397 * Addres.GetHashCode();
+                hash ^= 397 * PassportSeia.GetHashCode();
+                hash ^= 397 * PassportNumber.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClientsResult
+    {
+        public global::client.IGetClients_Clients? Clients
+        {
+            get;
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClients_Clients
+    {
+        /// <summary>
+        /// A flattened list of the nodes.
+        /// </summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::client.IGetClients_Clients_Nodes>? Nodes
+        {
+            get;
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClients_Clients_ClientConnection : IGetClients_Clients
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClients_Clients_Nodes
+    {
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String LastName
+        {
+            get;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public global::System.String SurName
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportSeia
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportNumber
+        {
+            get;
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClients_Clients_Nodes_Client : IGetClients_Clients_Nodes
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class GetFlightsResult : global::System.IEquatable<GetFlightsResult>, IGetFlightsResult
     {
         public GetFlightsResult(global::client.IGetFlights_Flights? flights)
@@ -1351,13 +1690,14 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class GetOrders_Orders_Nodes_Order : global::System.IEquatable<GetOrders_Orders_Nodes_Order>, IGetOrders_Orders_Nodes_Order
     {
-        public GetOrders_Orders_Nodes_Order(global::System.Int32 id, global::System.String mesto, global::System.Int32 counts, global::client.IGetOrders_Orders_Nodes_Client client, global::client.IGetOrders_Orders_Nodes_Flight flight)
+        public GetOrders_Orders_Nodes_Order(global::System.Int32 id, global::System.String mesto, global::System.Int32 counts, global::client.IGetOrders_Orders_Nodes_Client client, global::client.IGetOrders_Orders_Nodes_Flight flight, global::client.IGetOrders_Orders_Nodes_Card card)
         {
             Id = id;
             Mesto = mesto;
             Counts = counts;
             Client = client;
             Flight = flight;
+            Card = card;
         }
 
         public global::System.Int32 Id
@@ -1385,6 +1725,11 @@ namespace client
             get;
         }
 
+        public global::client.IGetOrders_Orders_Nodes_Card Card
+        {
+            get;
+        }
+
         public virtual global::System.Boolean Equals(GetOrders_Orders_Nodes_Order? other)
         {
             if (ReferenceEquals(null, other))
@@ -1402,7 +1747,7 @@ namespace client
                 return false;
             }
 
-            return (Id == other.Id) && Mesto.Equals(other.Mesto) && Counts == other.Counts && Client.Equals(other.Client) && Flight.Equals(other.Flight);
+            return (Id == other.Id) && Mesto.Equals(other.Mesto) && Counts == other.Counts && Client.Equals(other.Client) && Flight.Equals(other.Flight) && Card.Equals(other.Card);
         }
 
         public override global::System.Boolean Equals(global::System.Object? obj)
@@ -1435,6 +1780,7 @@ namespace client
                 hash ^= 397 * Counts.GetHashCode();
                 hash ^= 397 * Client.GetHashCode();
                 hash ^= 397 * Flight.GetHashCode();
+                hash ^= 397 * Card.GetHashCode();
                 return hash;
             }
         }
@@ -1443,11 +1789,12 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class GetOrders_Orders_Nodes_Client_Client : global::System.IEquatable<GetOrders_Orders_Nodes_Client_Client>, IGetOrders_Orders_Nodes_Client_Client
     {
-        public GetOrders_Orders_Nodes_Client_Client(global::System.String lastName, global::System.String name, global::System.String surName, global::System.Int32 passportNumber, global::System.Int32 passportSeia)
+        public GetOrders_Orders_Nodes_Client_Client(global::System.String lastName, global::System.String name, global::System.String surName, global::System.String phone, global::System.Int32 passportNumber, global::System.Int32 passportSeia)
         {
             LastName = lastName;
             Name = name;
             SurName = surName;
+            Phone = phone;
             PassportNumber = passportNumber;
             PassportSeia = passportSeia;
         }
@@ -1463,6 +1810,11 @@ namespace client
         }
 
         public global::System.String SurName
+        {
+            get;
+        }
+
+        public global::System.String Phone
         {
             get;
         }
@@ -1494,7 +1846,7 @@ namespace client
                 return false;
             }
 
-            return (LastName.Equals(other.LastName)) && Name.Equals(other.Name) && SurName.Equals(other.SurName) && PassportNumber == other.PassportNumber && PassportSeia == other.PassportSeia;
+            return (LastName.Equals(other.LastName)) && Name.Equals(other.Name) && SurName.Equals(other.SurName) && Phone.Equals(other.Phone) && PassportNumber == other.PassportNumber && PassportSeia == other.PassportSeia;
         }
 
         public override global::System.Boolean Equals(global::System.Object? obj)
@@ -1525,6 +1877,7 @@ namespace client
                 hash ^= 397 * LastName.GetHashCode();
                 hash ^= 397 * Name.GetHashCode();
                 hash ^= 397 * SurName.GetHashCode();
+                hash ^= 397 * Phone.GetHashCode();
                 hash ^= 397 * PassportNumber.GetHashCode();
                 hash ^= 397 * PassportSeia.GetHashCode();
                 return hash;
@@ -1612,6 +1965,70 @@ namespace client
                 hash ^= 397 * DateStart.GetHashCode();
                 hash ^= 397 * TimeStart.GetHashCode();
                 hash ^= 397 * Route.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetOrders_Orders_Nodes_Card_Card : global::System.IEquatable<GetOrders_Orders_Nodes_Card_Card>, IGetOrders_Orders_Nodes_Card_Card
+    {
+        public GetOrders_Orders_Nodes_Card_Card(global::System.String name)
+        {
+            Name = name;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetOrders_Orders_Nodes_Card_Card? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Name.Equals(other.Name));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetOrders_Orders_Nodes_Card_Card)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Name.GetHashCode();
                 return hash;
             }
         }
@@ -1761,6 +2178,11 @@ namespace client
         {
             get;
         }
+
+        public global::client.IGetOrders_Orders_Nodes_Card Card
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -1782,6 +2204,11 @@ namespace client
         }
 
         public global::System.String SurName
+        {
+            get;
+        }
+
+        public global::System.String Phone
         {
             get;
         }
@@ -1828,6 +2255,20 @@ namespace client
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface IGetOrders_Orders_Nodes_Flight_Flight : IGetOrders_Orders_Nodes_Flight
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetOrders_Orders_Nodes_Card
+    {
+        public global::System.String Name
+        {
+            get;
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetOrders_Orders_Nodes_Card_Card : IGetOrders_Orders_Nodes_Card
     {
     }
 
@@ -2160,6 +2601,333 @@ namespace client
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface IGetRoutes_Routes_Nodes_Route : IGetRoutes_Routes_Nodes
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksResult : global::System.IEquatable<GetSotrudniksResult>, IGetSotrudniksResult
+    {
+        public GetSotrudniksResult(global::client.IGetSotrudniks_Sotrudniks? sotrudniks)
+        {
+            Sotrudniks = sotrudniks;
+        }
+
+        public global::client.IGetSotrudniks_Sotrudniks? Sotrudniks
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetSotrudniksResult? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (((Sotrudniks is null && other.Sotrudniks is null) || Sotrudniks != null && Sotrudniks.Equals(other.Sotrudniks)));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetSotrudniksResult)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Sotrudniks != null)
+                {
+                    hash ^= 397 * Sotrudniks.GetHashCode();
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniks_Sotrudniks_SotrudnikConnection : global::System.IEquatable<GetSotrudniks_Sotrudniks_SotrudnikConnection>, IGetSotrudniks_Sotrudniks_SotrudnikConnection
+    {
+        public GetSotrudniks_Sotrudniks_SotrudnikConnection(global::System.Collections.Generic.IReadOnlyList<global::client.IGetSotrudniks_Sotrudniks_Nodes>? nodes)
+        {
+            Nodes = nodes;
+        }
+
+        /// <summary>
+        /// A flattened list of the nodes.
+        /// </summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::client.IGetSotrudniks_Sotrudniks_Nodes>? Nodes
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetSotrudniks_Sotrudniks_SotrudnikConnection? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (global::StrawberryShake.Helper.ComparisonHelper.SequenceEqual(Nodes, other.Nodes));
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetSotrudniks_Sotrudniks_SotrudnikConnection)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                if (Nodes != null)
+                {
+                    foreach (var Nodes_elm in Nodes)
+                    {
+                        hash ^= 397 * Nodes_elm.GetHashCode();
+                    }
+                }
+
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniks_Sotrudniks_Nodes_Sotrudnik : global::System.IEquatable<GetSotrudniks_Sotrudniks_Nodes_Sotrudnik>, IGetSotrudniks_Sotrudniks_Nodes_Sotrudnik
+    {
+        public GetSotrudniks_Sotrudniks_Nodes_Sotrudnik(global::System.Int32 id, global::System.String last_Name, global::System.String name, global::System.String sur_Name, global::System.String phone, global::System.Int32 stage, global::System.String addres)
+        {
+            Id = id;
+            Last_name = last_Name;
+            Name = name;
+            Sur_name = sur_Name;
+            Phone = phone;
+            Stage = stage;
+            Addres = addres;
+        }
+
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String Last_name
+        {
+            get;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public global::System.String Sur_name
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.Int32 Stage
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+
+        public virtual global::System.Boolean Equals(GetSotrudniks_Sotrudniks_Nodes_Sotrudnik? other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (other.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return (Id == other.Id) && Last_name.Equals(other.Last_name) && Name.Equals(other.Name) && Sur_name.Equals(other.Sur_name) && Phone.Equals(other.Phone) && Stage == other.Stage && Addres.Equals(other.Addres);
+        }
+
+        public override global::System.Boolean Equals(global::System.Object? obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            return Equals((GetSotrudniks_Sotrudniks_Nodes_Sotrudnik)obj);
+        }
+
+        public override global::System.Int32 GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 5;
+                hash ^= 397 * Id.GetHashCode();
+                hash ^= 397 * Last_name.GetHashCode();
+                hash ^= 397 * Name.GetHashCode();
+                hash ^= 397 * Sur_name.GetHashCode();
+                hash ^= 397 * Phone.GetHashCode();
+                hash ^= 397 * Stage.GetHashCode();
+                hash ^= 397 * Addres.GetHashCode();
+                return hash;
+            }
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniksResult
+    {
+        public global::client.IGetSotrudniks_Sotrudniks? Sotrudniks
+        {
+            get;
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniks_Sotrudniks
+    {
+        /// <summary>
+        /// A flattened list of the nodes.
+        /// </summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::client.IGetSotrudniks_Sotrudniks_Nodes>? Nodes
+        {
+            get;
+        }
+    }
+
+    /// <summary>
+    /// A connection to a list of items.
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniks_Sotrudniks_SotrudnikConnection : IGetSotrudniks_Sotrudniks
+    {
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniks_Sotrudniks_Nodes
+    {
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String Last_name
+        {
+            get;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public global::System.String Sur_name
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.Int32 Stage
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniks_Sotrudniks_Nodes_Sotrudnik : IGetSotrudniks_Sotrudniks_Nodes
     {
     }
 
@@ -3164,6 +3932,154 @@ namespace client
     }
 
     /// <summary>
+    /// Represents the operation service of the GetClients GraphQL operation
+    /// <code>
+    /// query GetClients {
+    ///   clients {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       lastName
+    ///       name
+    ///       surName
+    ///       phone
+    ///       addres
+    ///       passportSeia
+    ///       passportNumber
+    ///       ... on Client {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsQueryDocument : global::StrawberryShake.IDocument
+    {
+        private GetClientsQueryDocument()
+        {
+        }
+
+        public static GetClientsQueryDocument Instance
+        {
+            get;
+        }
+
+        = new GetClientsQueryDocument();
+        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x6f, 0x64, 0x65, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x75, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x53, 0x65, 0x69, 0x61, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash
+        {
+            get;
+        }
+
+        = new global::StrawberryShake.DocumentHash("md5Hash", "b1533d80036b9cbe99340a30af9cd8ff");
+        public override global::System.String ToString()
+        {
+#if NETSTANDARD2_0
+        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
+#else
+            return global::System.Text.Encoding.UTF8.GetString(Body);
+#endif
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetClients GraphQL operation
+    /// <code>
+    /// query GetClients {
+    ///   clients {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       lastName
+    ///       name
+    ///       surName
+    ///       phone
+    ///       addres
+    ///       passportSeia
+    ///       passportNumber
+    ///       ... on Client {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsQuery : global::client.IGetClientsQuery
+    {
+        private readonly global::StrawberryShake.IOperationExecutor<IGetClientsResult> _operationExecutor;
+        public GetClientsQuery(global::StrawberryShake.IOperationExecutor<IGetClientsResult> operationExecutor)
+        {
+            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IGetClientsResult);
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetClientsResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = CreateRequest();
+            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
+        }
+
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetClientsResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null)
+        {
+            var request = CreateRequest();
+            return _operationExecutor.Watch(request, strategy);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest()
+        {
+            return CreateRequest(null);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return new global::StrawberryShake.OperationRequest(id: GetClientsQueryDocument.Instance.Hash.Value, name: "GetClients", document: GetClientsQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default);
+        }
+
+        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return CreateRequest();
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetClients GraphQL operation
+    /// <code>
+    /// query GetClients {
+    ///   clients {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       lastName
+    ///       name
+    ///       surName
+    ///       phone
+    ///       addres
+    ///       passportSeia
+    ///       passportNumber
+    ///       ... on Client {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetClientsQuery : global::StrawberryShake.IOperationRequestFactory
+    {
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetClientsResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetClientsResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
+    }
+
+    /// <summary>
     /// Represents the operation service of the GetFlights GraphQL operation
     /// <code>
     /// query GetFlights {
@@ -3363,6 +4279,7 @@ namespace client
     ///         lastName
     ///         name
     ///         surName
+    ///         phone
     ///         passportNumber
     ///         passportSeia
     ///         ... on Client {
@@ -3388,6 +4305,13 @@ namespace client
     ///           id
     ///         }
     ///       }
+    ///       card {
+    ///         __typename
+    ///         name
+    ///         ... on Card {
+    ///           id
+    ///         }
+    ///       }
     ///       ... on Order {
     ///         id
     ///       }
@@ -3410,13 +4334,13 @@ namespace client
 
         = new GetOrdersQueryDocument();
         public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
-        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x6f, 0x64, 0x65, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x6d, 0x65, 0x73, 0x74, 0x6f, 0x20, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x73, 0x20, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x75, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x53, 0x65, 0x69, 0x61, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x66, 0x6c, 0x69, 0x67, 0x68, 0x74, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x64, 0x61, 0x74, 0x65, 0x53, 0x74, 0x61, 0x72, 0x74, 0x20, 0x74, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x61, 0x72, 0x74, 0x20, 0x72, 0x6f, 0x75, 0x74, 0x65, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x74, 0x61, 0x72, 0x74, 0x20, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x20, 0x74, 0x69, 0x6d, 0x65, 0x20, 0x70, 0x72, 0x69, 0x63, 0x65, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x52, 0x6f, 0x75, 0x74, 0x65, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x46, 0x6c, 0x69, 0x67, 0x68, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x6f, 0x64, 0x65, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x6d, 0x65, 0x73, 0x74, 0x6f, 0x20, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x73, 0x20, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6c, 0x61, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x75, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x20, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x20, 0x70, 0x61, 0x73, 0x73, 0x70, 0x6f, 0x72, 0x74, 0x53, 0x65, 0x69, 0x61, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x66, 0x6c, 0x69, 0x67, 0x68, 0x74, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x64, 0x61, 0x74, 0x65, 0x53, 0x74, 0x61, 0x72, 0x74, 0x20, 0x74, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x61, 0x72, 0x74, 0x20, 0x72, 0x6f, 0x75, 0x74, 0x65, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x74, 0x61, 0x72, 0x74, 0x20, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x20, 0x74, 0x69, 0x6d, 0x65, 0x20, 0x70, 0x72, 0x69, 0x63, 0x65, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x52, 0x6f, 0x75, 0x74, 0x65, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x46, 0x6c, 0x69, 0x67, 0x68, 0x74, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x63, 0x61, 0x72, 0x64, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
         public global::StrawberryShake.DocumentHash Hash
         {
             get;
         }
 
-        = new global::StrawberryShake.DocumentHash("md5Hash", "847e5af9902c547086e33d64df84ea34");
+        = new global::StrawberryShake.DocumentHash("md5Hash", "77335306595b0b4ad07221d872570a67");
         public override global::System.String ToString()
         {
 #if NETSTANDARD2_0
@@ -3443,6 +4367,7 @@ namespace client
     ///         lastName
     ///         name
     ///         surName
+    ///         phone
     ///         passportNumber
     ///         passportSeia
     ///         ... on Client {
@@ -3465,6 +4390,13 @@ namespace client
     ///           }
     ///         }
     ///         ... on Flight {
+    ///           id
+    ///         }
+    ///       }
+    ///       card {
+    ///         __typename
+    ///         name
+    ///         ... on Card {
     ///           id
     ///         }
     ///       }
@@ -3530,6 +4462,7 @@ namespace client
     ///         lastName
     ///         name
     ///         surName
+    ///         phone
     ///         passportNumber
     ///         passportSeia
     ///         ... on Client {
@@ -3552,6 +4485,13 @@ namespace client
     ///           }
     ///         }
     ///         ... on Flight {
+    ///           id
+    ///         }
+    ///       }
+    ///       card {
+    ///         __typename
+    ///         name
+    ///         ... on Card {
     ///           id
     ///         }
     ///       }
@@ -3707,6 +4647,151 @@ namespace client
     {
         global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetRoutesResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
         global::System.IObservable<global::StrawberryShake.IOperationResult<IGetRoutesResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetSotrudniks GraphQL operation
+    /// <code>
+    /// query GetSotrudniks {
+    ///   sotrudniks {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       last_name
+    ///       name
+    ///       sur_name
+    ///       phone
+    ///       stage
+    ///       addres
+    ///       ... on Sotrudnik {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksQueryDocument : global::StrawberryShake.IDocument
+    {
+        private GetSotrudniksQueryDocument()
+        {
+        }
+
+        public static GetSotrudniksQueryDocument Instance
+        {
+            get;
+        }
+
+        = new GetSotrudniksQueryDocument();
+        public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Query;
+        public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x71, 0x75, 0x65, 0x72, 0x79, 0x20, 0x47, 0x65, 0x74, 0x53, 0x6f, 0x74, 0x72, 0x75, 0x64, 0x6e, 0x69, 0x6b, 0x73, 0x20, 0x7b, 0x20, 0x73, 0x6f, 0x74, 0x72, 0x75, 0x64, 0x6e, 0x69, 0x6b, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x6f, 0x64, 0x65, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x69, 0x64, 0x20, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x75, 0x72, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x20, 0x73, 0x74, 0x61, 0x67, 0x65, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x53, 0x6f, 0x74, 0x72, 0x75, 0x64, 0x6e, 0x69, 0x6b, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
+        public global::StrawberryShake.DocumentHash Hash
+        {
+            get;
+        }
+
+        = new global::StrawberryShake.DocumentHash("md5Hash", "8809142b27f4e2f3680841068435c994");
+        public override global::System.String ToString()
+        {
+#if NETSTANDARD2_0
+        return global::System.Text.Encoding.UTF8.GetString(Body.ToArray());
+#else
+            return global::System.Text.Encoding.UTF8.GetString(Body);
+#endif
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetSotrudniks GraphQL operation
+    /// <code>
+    /// query GetSotrudniks {
+    ///   sotrudniks {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       last_name
+    ///       name
+    ///       sur_name
+    ///       phone
+    ///       stage
+    ///       addres
+    ///       ... on Sotrudnik {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksQuery : global::client.IGetSotrudniksQuery
+    {
+        private readonly global::StrawberryShake.IOperationExecutor<IGetSotrudniksResult> _operationExecutor;
+        public GetSotrudniksQuery(global::StrawberryShake.IOperationExecutor<IGetSotrudniksResult> operationExecutor)
+        {
+            _operationExecutor = operationExecutor ?? throw new global::System.ArgumentNullException(nameof(operationExecutor));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationRequestFactory.ResultType => typeof(IGetSotrudniksResult);
+        public async global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetSotrudniksResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = CreateRequest();
+            return await _operationExecutor.ExecuteAsync(request, cancellationToken).ConfigureAwait(false);
+        }
+
+        public global::System.IObservable<global::StrawberryShake.IOperationResult<IGetSotrudniksResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null)
+        {
+            var request = CreateRequest();
+            return _operationExecutor.Watch(request, strategy);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest()
+        {
+            return CreateRequest(null);
+        }
+
+        private global::StrawberryShake.OperationRequest CreateRequest(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return new global::StrawberryShake.OperationRequest(id: GetSotrudniksQueryDocument.Instance.Hash.Value, name: "GetSotrudniks", document: GetSotrudniksQueryDocument.Instance, strategy: global::StrawberryShake.RequestStrategy.Default);
+        }
+
+        global::StrawberryShake.OperationRequest global::StrawberryShake.IOperationRequestFactory.Create(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Object?>? variables)
+        {
+            return CreateRequest();
+        }
+    }
+
+    /// <summary>
+    /// Represents the operation service of the GetSotrudniks GraphQL operation
+    /// <code>
+    /// query GetSotrudniks {
+    ///   sotrudniks {
+    ///     __typename
+    ///     nodes {
+    ///       __typename
+    ///       id
+    ///       last_name
+    ///       name
+    ///       sur_name
+    ///       phone
+    ///       stage
+    ///       addres
+    ///       ... on Sotrudnik {
+    ///         id
+    ///       }
+    ///     }
+    ///   }
+    /// }
+    /// </code>
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public interface IGetSotrudniksQuery : global::StrawberryShake.IOperationRequestFactory
+    {
+        global::System.Threading.Tasks.Task<global::StrawberryShake.IOperationResult<IGetSotrudniksResult>> ExecuteAsync(global::System.Threading.CancellationToken cancellationToken = default);
+        global::System.IObservable<global::StrawberryShake.IOperationResult<IGetSotrudniksResult>> Watch(global::StrawberryShake.ExecutionStrategy? strategy = null);
     }
 
     /// <summary>
@@ -4034,18 +5119,22 @@ namespace client
     {
         private readonly global::client.IAddOrderMutation _addOrder;
         private readonly global::client.IGetAirsQuery _getAirs;
+        private readonly global::client.IGetClientsQuery _getClients;
         private readonly global::client.IGetFlightsQuery _getFlights;
         private readonly global::client.IGetOrdersQuery _getOrders;
         private readonly global::client.IGetRoutesQuery _getRoutes;
+        private readonly global::client.IGetSotrudniksQuery _getSotrudniks;
         private readonly global::client.IRefreshTokenMutation _refreshToken;
         private readonly global::client.ISignInMutation _signIn;
-        public GqlClient(global::client.IAddOrderMutation addOrder, global::client.IGetAirsQuery getAirs, global::client.IGetFlightsQuery getFlights, global::client.IGetOrdersQuery getOrders, global::client.IGetRoutesQuery getRoutes, global::client.IRefreshTokenMutation refreshToken, global::client.ISignInMutation signIn)
+        public GqlClient(global::client.IAddOrderMutation addOrder, global::client.IGetAirsQuery getAirs, global::client.IGetClientsQuery getClients, global::client.IGetFlightsQuery getFlights, global::client.IGetOrdersQuery getOrders, global::client.IGetRoutesQuery getRoutes, global::client.IGetSotrudniksQuery getSotrudniks, global::client.IRefreshTokenMutation refreshToken, global::client.ISignInMutation signIn)
         {
             _addOrder = addOrder ?? throw new global::System.ArgumentNullException(nameof(addOrder));
             _getAirs = getAirs ?? throw new global::System.ArgumentNullException(nameof(getAirs));
+            _getClients = getClients ?? throw new global::System.ArgumentNullException(nameof(getClients));
             _getFlights = getFlights ?? throw new global::System.ArgumentNullException(nameof(getFlights));
             _getOrders = getOrders ?? throw new global::System.ArgumentNullException(nameof(getOrders));
             _getRoutes = getRoutes ?? throw new global::System.ArgumentNullException(nameof(getRoutes));
+            _getSotrudniks = getSotrudniks ?? throw new global::System.ArgumentNullException(nameof(getSotrudniks));
             _refreshToken = refreshToken ?? throw new global::System.ArgumentNullException(nameof(refreshToken));
             _signIn = signIn ?? throw new global::System.ArgumentNullException(nameof(signIn));
         }
@@ -4053,9 +5142,11 @@ namespace client
         public static global::System.String ClientName => "GqlClient";
         public global::client.IAddOrderMutation AddOrder => _addOrder;
         public global::client.IGetAirsQuery GetAirs => _getAirs;
+        public global::client.IGetClientsQuery GetClients => _getClients;
         public global::client.IGetFlightsQuery GetFlights => _getFlights;
         public global::client.IGetOrdersQuery GetOrders => _getOrders;
         public global::client.IGetRoutesQuery GetRoutes => _getRoutes;
+        public global::client.IGetSotrudniksQuery GetSotrudniks => _getSotrudniks;
         public global::client.IRefreshTokenMutation RefreshToken => _refreshToken;
         public global::client.ISignInMutation SignIn => _signIn;
     }
@@ -4076,6 +5167,11 @@ namespace client
             get;
         }
 
+        global::client.IGetClientsQuery GetClients
+        {
+            get;
+        }
+
         global::client.IGetFlightsQuery GetFlights
         {
             get;
@@ -4087,6 +5183,11 @@ namespace client
         }
 
         global::client.IGetRoutesQuery GetRoutes
+        {
+            get;
+        }
+
+        global::client.IGetSotrudniksQuery GetSotrudniks
         {
             get;
         }
@@ -4164,11 +5265,15 @@ namespace client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class SotrudnikEntity
     {
-        public SotrudnikEntity(global::System.String last_Name = default !, global::System.String name = default !, global::System.String sur_Name = default !)
+        public SotrudnikEntity(global::System.String last_Name = default !, global::System.String name = default !, global::System.String sur_Name = default !, global::System.Int32 id = default !, global::System.String phone = default !, global::System.Int32 stage = default !, global::System.String addres = default !)
         {
             Last_name = last_Name;
             Name = name;
             Sur_name = sur_Name;
+            Id = id;
+            Phone = phone;
+            Stage = stage;
+            Addres = addres;
         }
 
         public global::System.String Last_name
@@ -4182,6 +5287,82 @@ namespace client.State
         }
 
         public global::System.String Sur_name
+        {
+            get;
+        }
+
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.Int32 Stage
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class ClientEntity
+    {
+        public ClientEntity(global::System.Int32 id = default !, global::System.String lastName = default !, global::System.String name = default !, global::System.String surName = default !, global::System.String phone = default !, global::System.String addres = default !, global::System.Int32 passportSeia = default !, global::System.Int32 passportNumber = default !)
+        {
+            Id = id;
+            LastName = lastName;
+            Name = name;
+            SurName = surName;
+            Phone = phone;
+            Addres = addres;
+            PassportSeia = passportSeia;
+            PassportNumber = passportNumber;
+        }
+
+        public global::System.Int32 Id
+        {
+            get;
+        }
+
+        public global::System.String LastName
+        {
+            get;
+        }
+
+        public global::System.String Name
+        {
+            get;
+        }
+
+        public global::System.String SurName
+        {
+            get;
+        }
+
+        public global::System.String Phone
+        {
+            get;
+        }
+
+        public global::System.String Addres
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportSeia
+        {
+            get;
+        }
+
+        public global::System.Int32 PassportNumber
         {
             get;
         }
@@ -4272,13 +5453,14 @@ namespace client.State
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class OrderEntity
     {
-        public OrderEntity(global::System.Int32 id = default !, global::System.String mesto = default !, global::System.Int32 counts = default !, global::StrawberryShake.EntityId client = default !, global::StrawberryShake.EntityId flight = default !)
+        public OrderEntity(global::System.Int32 id = default !, global::System.String mesto = default !, global::System.Int32 counts = default !, global::StrawberryShake.EntityId client = default !, global::StrawberryShake.EntityId flight = default !, global::StrawberryShake.EntityId card = default !)
         {
             Id = id;
             Mesto = mesto;
             Counts = counts;
             Client = client;
             Flight = flight;
+            Card = card;
         }
 
         public global::System.Int32 Id
@@ -4305,41 +5487,22 @@ namespace client.State
         {
             get;
         }
+
+        public global::StrawberryShake.EntityId Card
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
-    public partial class ClientEntity
+    public partial class CardEntity
     {
-        public ClientEntity(global::System.String lastName = default !, global::System.String name = default !, global::System.String surName = default !, global::System.Int32 passportNumber = default !, global::System.Int32 passportSeia = default !)
+        public CardEntity(global::System.String name = default !)
         {
-            LastName = lastName;
             Name = name;
-            SurName = surName;
-            PassportNumber = passportNumber;
-            PassportSeia = passportSeia;
-        }
-
-        public global::System.String LastName
-        {
-            get;
         }
 
         public global::System.String Name
-        {
-            get;
-        }
-
-        public global::System.String SurName
-        {
-            get;
-        }
-
-        public global::System.Int32 PassportNumber
-        {
-            get;
-        }
-
-        public global::System.Int32 PassportSeia
         {
             get;
         }
@@ -4636,6 +5799,130 @@ namespace client.State
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::client.GetClientsResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetClients_Clients_Nodes_Client> _getClients_Clients_Nodes_ClientFromClientEntityMapper;
+        public GetClientsResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetClients_Clients_Nodes_Client> getClients_Clients_Nodes_ClientFromClientEntityMapper)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _getClients_Clients_Nodes_ClientFromClientEntityMapper = getClients_Clients_Nodes_ClientFromClientEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getClients_Clients_Nodes_ClientFromClientEntityMapper));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::client.IGetClientsResult);
+        public GetClientsResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            if (dataInfo is GetClientsResultInfo info)
+            {
+                return new GetClientsResult(MapIGetClients_Clients(info.Clients, snapshot));
+            }
+
+            throw new global::System.ArgumentException("GetClientsResultInfo expected.");
+        }
+
+        private global::client.IGetClients_Clients? MapIGetClients_Clients(global::client.State.ClientConnectionData? data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (data is null)
+            {
+                return null;
+            }
+
+            IGetClients_Clients returnValue = default !;
+            if (data?.__typename.Equals("ClientConnection", global::System.StringComparison.Ordinal) ?? false)
+            {
+                returnValue = new GetClients_Clients_ClientConnection(MapIGetClients_Clients_NodesNonNullableArray(data.Nodes, snapshot));
+            }
+            else
+            {
+                throw new global::System.NotSupportedException();
+            }
+
+            return returnValue;
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::client.IGetClients_Clients_Nodes>? MapIGetClients_Clients_NodesNonNullableArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (list is null)
+            {
+                return null;
+            }
+
+            var clients = new global::System.Collections.Generic.List<global::client.IGetClients_Clients_Nodes>();
+            foreach (global::StrawberryShake.EntityId child in list)
+            {
+                clients.Add(MapNonNullableIGetClients_Clients_Nodes(child, snapshot));
+            }
+
+            return clients;
+        }
+
+        private global::client.IGetClients_Clients_Nodes MapNonNullableIGetClients_Clients_Nodes(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId.Name.Equals("Client", global::System.StringComparison.Ordinal))
+            {
+                return _getClients_Clients_Nodes_ClientFromClientEntityMapper.Map(snapshot.GetEntity<global::client.State.ClientEntity>(entityId) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
+        {
+            return Create(dataInfo, snapshot);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsResultInfo : global::StrawberryShake.IOperationResultDataInfo
+    {
+        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
+        private readonly global::System.UInt64 _version;
+        public GetClientsResultInfo(global::client.State.ClientConnectionData? clients, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        {
+            Clients = clients;
+            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
+            _version = version;
+        }
+
+        public global::client.State.ClientConnectionData? Clients
+        {
+            get;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
+        public global::System.UInt64 Version => _version;
+        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
+        {
+            return new GetClientsResultInfo(Clients, _entityIds, version);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClients_Clients_Nodes_ClientFromClientEntityMapper : global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetClients_Clients_Nodes_Client>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public GetClients_Clients_Nodes_ClientFromClientEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+        }
+
+        public GetClients_Clients_Nodes_Client Map(global::client.State.ClientEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            return new GetClients_Clients_Nodes_Client(entity.Id, entity.LastName, entity.Name, entity.SurName, entity.Phone, entity.Addres, entity.PassportSeia, entity.PassportNumber);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class GetFlightsResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::client.GetFlightsResult>
     {
         private readonly global::StrawberryShake.IEntityStore _entityStore;
@@ -4855,13 +6142,15 @@ namespace client.State
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> _getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper;
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> _getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper;
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> _getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper;
-        public GetOrdersResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.OrderEntity, GetOrders_Orders_Nodes_Order> getOrders_Orders_Nodes_OrderFromOrderEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper)
+        private readonly global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, GetOrders_Orders_Nodes_Card_Card> _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper;
+        public GetOrdersResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.OrderEntity, GetOrders_Orders_Nodes_Order> getOrders_Orders_Nodes_OrderFromOrderEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, GetOrders_Orders_Nodes_Card_Card> getOrders_Orders_Nodes_Card_CardFromCardEntityMapper)
         {
             _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
             _getOrders_Orders_Nodes_OrderFromOrderEntityMapper = getOrders_Orders_Nodes_OrderFromOrderEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_OrderFromOrderEntityMapper));
             _getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper = getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper));
             _getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper = getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper));
             _getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper = getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper));
+            _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper = getOrders_Orders_Nodes_Card_CardFromCardEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Card_CardFromCardEntityMapper));
         }
 
         global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::client.IGetOrdersResult);
@@ -4956,6 +6245,16 @@ namespace client.State
             throw new global::System.NotSupportedException();
         }
 
+        private global::client.IGetOrders_Orders_Nodes_Card MapNonNullableIGetOrders_Orders_Nodes_Card(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId.Name.Equals("Card", global::System.StringComparison.Ordinal))
+            {
+                return _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper.Map(snapshot.GetEntity<global::client.State.CardEntity>(entityId) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
         global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
         {
             return Create(dataInfo, snapshot);
@@ -4994,12 +6293,14 @@ namespace client.State
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> _getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper;
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> _getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper;
         private readonly global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> _getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper;
-        public GetOrders_Orders_Nodes_OrderFromOrderEntityMapper(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper)
+        private readonly global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, GetOrders_Orders_Nodes_Card_Card> _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper;
+        public GetOrders_Orders_Nodes_OrderFromOrderEntityMapper(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, GetOrders_Orders_Nodes_Client_Client> getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, GetOrders_Orders_Nodes_Flight_Flight> getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, GetOrders_Orders_Nodes_Flight_Route_Route> getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper, global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, GetOrders_Orders_Nodes_Card_Card> getOrders_Orders_Nodes_Card_CardFromCardEntityMapper)
         {
             _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
             _getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper = getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Client_ClientFromClientEntityMapper));
             _getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper = getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper));
             _getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper = getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper));
+            _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper = getOrders_Orders_Nodes_Card_CardFromCardEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getOrders_Orders_Nodes_Card_CardFromCardEntityMapper));
         }
 
         public GetOrders_Orders_Nodes_Order Map(global::client.State.OrderEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
@@ -5009,7 +6310,7 @@ namespace client.State
                 snapshot = _entityStore.CurrentSnapshot;
             }
 
-            return new GetOrders_Orders_Nodes_Order(entity.Id, entity.Mesto, entity.Counts, MapNonNullableIGetOrders_Orders_Nodes_Client(entity.Client, snapshot), MapNonNullableIGetOrders_Orders_Nodes_Flight(entity.Flight, snapshot));
+            return new GetOrders_Orders_Nodes_Order(entity.Id, entity.Mesto, entity.Counts, MapNonNullableIGetOrders_Orders_Nodes_Client(entity.Client, snapshot), MapNonNullableIGetOrders_Orders_Nodes_Flight(entity.Flight, snapshot), MapNonNullableIGetOrders_Orders_Nodes_Card(entity.Card, snapshot));
         }
 
         private global::client.IGetOrders_Orders_Nodes_Client MapNonNullableIGetOrders_Orders_Nodes_Client(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
@@ -5041,6 +6342,16 @@ namespace client.State
 
             throw new global::System.NotSupportedException();
         }
+
+        private global::client.IGetOrders_Orders_Nodes_Card MapNonNullableIGetOrders_Orders_Nodes_Card(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId.Name.Equals("Card", global::System.StringComparison.Ordinal))
+            {
+                return _getOrders_Orders_Nodes_Card_CardFromCardEntityMapper.Map(snapshot.GetEntity<global::client.State.CardEntity>(entityId) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -5059,7 +6370,7 @@ namespace client.State
                 snapshot = _entityStore.CurrentSnapshot;
             }
 
-            return new GetOrders_Orders_Nodes_Client_Client(entity.LastName, entity.Name, entity.SurName, entity.PassportNumber, entity.PassportSeia);
+            return new GetOrders_Orders_Nodes_Client_Client(entity.LastName, entity.Name, entity.SurName, entity.Phone, entity.PassportNumber, entity.PassportSeia);
         }
     }
 
@@ -5092,6 +6403,26 @@ namespace client.State
             }
 
             throw new global::System.NotSupportedException();
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetOrders_Orders_Nodes_Card_CardFromCardEntityMapper : global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, GetOrders_Orders_Nodes_Card_Card>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public GetOrders_Orders_Nodes_Card_CardFromCardEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+        }
+
+        public GetOrders_Orders_Nodes_Card_Card Map(global::client.State.CardEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            return new GetOrders_Orders_Nodes_Card_Card(entity.Name);
         }
     }
 
@@ -5236,6 +6567,130 @@ namespace client.State
             }
 
             return new GetRoutes_Routes_Nodes_Route(entity.Id, entity.Start, entity.Target, entity.Time, entity.Price);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksResultFactory : global::StrawberryShake.IOperationResultDataFactory<global::client.GetSotrudniksResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityMapper<global::client.State.SotrudnikEntity, GetSotrudniks_Sotrudniks_Nodes_Sotrudnik> _getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper;
+        public GetSotrudniksResultFactory(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityMapper<global::client.State.SotrudnikEntity, GetSotrudniks_Sotrudniks_Nodes_Sotrudnik> getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper = getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper ?? throw new global::System.ArgumentNullException(nameof(getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper));
+        }
+
+        global::System.Type global::StrawberryShake.IOperationResultDataFactory.ResultType => typeof(global::client.IGetSotrudniksResult);
+        public GetSotrudniksResult Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            if (dataInfo is GetSotrudniksResultInfo info)
+            {
+                return new GetSotrudniksResult(MapIGetSotrudniks_Sotrudniks(info.Sotrudniks, snapshot));
+            }
+
+            throw new global::System.ArgumentException("GetSotrudniksResultInfo expected.");
+        }
+
+        private global::client.IGetSotrudniks_Sotrudniks? MapIGetSotrudniks_Sotrudniks(global::client.State.SotrudnikConnectionData? data, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (data is null)
+            {
+                return null;
+            }
+
+            IGetSotrudniks_Sotrudniks returnValue = default !;
+            if (data?.__typename.Equals("SotrudnikConnection", global::System.StringComparison.Ordinal) ?? false)
+            {
+                returnValue = new GetSotrudniks_Sotrudniks_SotrudnikConnection(MapIGetSotrudniks_Sotrudniks_NodesNonNullableArray(data.Nodes, snapshot));
+            }
+            else
+            {
+                throw new global::System.NotSupportedException();
+            }
+
+            return returnValue;
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::client.IGetSotrudniks_Sotrudniks_Nodes>? MapIGetSotrudniks_Sotrudniks_NodesNonNullableArray(global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? list, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (list is null)
+            {
+                return null;
+            }
+
+            var sotrudniks = new global::System.Collections.Generic.List<global::client.IGetSotrudniks_Sotrudniks_Nodes>();
+            foreach (global::StrawberryShake.EntityId child in list)
+            {
+                sotrudniks.Add(MapNonNullableIGetSotrudniks_Sotrudniks_Nodes(child, snapshot));
+            }
+
+            return sotrudniks;
+        }
+
+        private global::client.IGetSotrudniks_Sotrudniks_Nodes MapNonNullableIGetSotrudniks_Sotrudniks_Nodes(global::StrawberryShake.EntityId entityId, global::StrawberryShake.IEntityStoreSnapshot snapshot)
+        {
+            if (entityId.Name.Equals("Sotrudnik", global::System.StringComparison.Ordinal))
+            {
+                return _getSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper.Map(snapshot.GetEntity<global::client.State.SotrudnikEntity>(entityId) ?? throw new global::StrawberryShake.GraphQLClientException());
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        global::System.Object global::StrawberryShake.IOperationResultDataFactory.Create(global::StrawberryShake.IOperationResultDataInfo dataInfo, global::StrawberryShake.IEntityStoreSnapshot? snapshot)
+        {
+            return Create(dataInfo, snapshot);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksResultInfo : global::StrawberryShake.IOperationResultDataInfo
+    {
+        private readonly global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> _entityIds;
+        private readonly global::System.UInt64 _version;
+        public GetSotrudniksResultInfo(global::client.State.SotrudnikConnectionData? sotrudniks, global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> entityIds, global::System.UInt64 version)
+        {
+            Sotrudniks = sotrudniks;
+            _entityIds = entityIds ?? throw new global::System.ArgumentNullException(nameof(entityIds));
+            _version = version;
+        }
+
+        public global::client.State.SotrudnikConnectionData? Sotrudniks
+        {
+            get;
+        }
+
+        public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
+        public global::System.UInt64 Version => _version;
+        public global::StrawberryShake.IOperationResultDataInfo WithVersion(global::System.UInt64 version)
+        {
+            return new GetSotrudniksResultInfo(Sotrudniks, _entityIds, version);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper : global::StrawberryShake.IEntityMapper<global::client.State.SotrudnikEntity, GetSotrudniks_Sotrudniks_Nodes_Sotrudnik>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        public GetSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper(global::StrawberryShake.IEntityStore entityStore)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+        }
+
+        public GetSotrudniks_Sotrudniks_Nodes_Sotrudnik Map(global::client.State.SotrudnikEntity entity, global::StrawberryShake.IEntityStoreSnapshot? snapshot = null)
+        {
+            if (snapshot is null)
+            {
+                snapshot = _entityStore.CurrentSnapshot;
+            }
+
+            return new GetSotrudniks_Sotrudniks_Nodes_Sotrudnik(entity.Id, entity.Last_name, entity.Name, entity.Sur_name, entity.Phone, entity.Stage, entity.Addres);
         }
     }
 
@@ -5804,17 +7259,161 @@ namespace client.State
             {
                 if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.SotrudnikEntity? entity))
                 {
-                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name"))));
+                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name")), entity.Id, entity.Phone, entity.Stage, entity.Addres));
                 }
                 else
                 {
-                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name"))));
+                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name")), default !, default !, default !, default !));
                 }
 
                 return entityId;
             }
 
             throw new global::System.NotSupportedException();
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetClientsBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetClientsResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::client.IGetClientsResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
+        public GetClientsBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::client.IGetClientsResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
+            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
+            _stringParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.String>("String") ?? throw new global::System.ArgumentException("No serializer for type `String` found.");
+        }
+
+        public global::StrawberryShake.IOperationResult<IGetClientsResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
+        {
+            (IGetClientsResult Result, GetClientsResultInfo Info)? data = null;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
+            if (response.Exception is null)
+            {
+                try
+                {
+                    if (response.Body != null)
+                    {
+                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                        {
+                            data = BuildData(dataElement);
+                        }
+
+                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                        {
+                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                        }
+                    }
+                }
+                catch (global::System.Exception ex)
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+            else
+            {
+                errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+            }
+
+            return new global::StrawberryShake.OperationResult<IGetClientsResult>(data?.Result, data?.Info, _resultDataFactory, errors);
+        }
+
+        private (IGetClientsResult, GetClientsResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
+        {
+            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
+            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
+            global::client.State.ClientConnectionData? clientsId = default !;
+            _entityStore.Update(session =>
+            {
+                clientsId = DeserializeIGetClients_Clients(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "clients"), entityIds);
+                snapshot = session.CurrentSnapshot;
+            });
+            var resultInfo = new GetClientsResultInfo(clientsId, entityIds, snapshot.Version);
+            return (_resultDataFactory.Create(resultInfo), resultInfo);
+        }
+
+        private global::client.State.ClientConnectionData? DeserializeIGetClients_Clients(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var typename = obj.Value.GetProperty("__typename").GetString();
+            if (typename?.Equals("ClientConnection", global::System.StringComparison.Ordinal) ?? false)
+            {
+                return new global::client.State.ClientConnectionData(typename, nodes: UpdateIGetClients_Clients_NodesEntityNonNullableArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "nodes"), entityIds));
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? UpdateIGetClients_Clients_NodesEntityNonNullableArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var clients = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId>();
+            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            {
+                clients.Add(UpdateNonNullableIGetClients_Clients_NodesEntity(session, child, entityIds));
+            }
+
+            return clients;
+        }
+
+        private global::StrawberryShake.EntityId UpdateNonNullableIGetClients_Clients_NodesEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
+            entityIds.Add(entityId);
+            if (entityId.Name.Equals("Client", global::System.StringComparison.Ordinal))
+            {
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.ClientEntity? entity))
+                {
+                    session.SetEntity(entityId, new global::client.State.ClientEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addres")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber"))));
+                }
+                else
+                {
+                    session.SetEntity(entityId, new global::client.State.ClientEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addres")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber"))));
+                }
+
+                return entityId;
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.Int32 DeserializeNonNullableInt32(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _intParser.Parse(obj.Value.GetInt32()!);
+        }
+
+        private global::System.String DeserializeNonNullableString(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _stringParser.Parse(obj.Value.GetString()!);
         }
     }
 
@@ -6152,11 +7751,11 @@ namespace client.State
             {
                 if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.OrderEntity? entity))
                 {
-                    session.SetEntity(entityId, new global::client.State.OrderEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "mesto")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "counts")), UpdateNonNullableIGetOrders_Orders_Nodes_ClientEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "client"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_FlightEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "flight"), entityIds)));
+                    session.SetEntity(entityId, new global::client.State.OrderEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "mesto")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "counts")), UpdateNonNullableIGetOrders_Orders_Nodes_ClientEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "client"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_FlightEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "flight"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_CardEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "card"), entityIds)));
                 }
                 else
                 {
-                    session.SetEntity(entityId, new global::client.State.OrderEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "mesto")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "counts")), UpdateNonNullableIGetOrders_Orders_Nodes_ClientEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "client"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_FlightEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "flight"), entityIds)));
+                    session.SetEntity(entityId, new global::client.State.OrderEntity(DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "mesto")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "counts")), UpdateNonNullableIGetOrders_Orders_Nodes_ClientEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "client"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_FlightEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "flight"), entityIds), UpdateNonNullableIGetOrders_Orders_Nodes_CardEntity(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "card"), entityIds)));
                 }
 
                 return entityId;
@@ -6198,11 +7797,11 @@ namespace client.State
             {
                 if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.ClientEntity? entity))
                 {
-                    session.SetEntity(entityId, new global::client.State.ClientEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia"))));
+                    session.SetEntity(entityId, new global::client.State.ClientEntity(entity.Id, DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), entity.Addres, DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber"))));
                 }
                 else
                 {
-                    session.SetEntity(entityId, new global::client.State.ClientEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia"))));
+                    session.SetEntity(entityId, new global::client.State.ClientEntity(default !, DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "lastName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "surName")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), default !, DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportSeia")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "passportNumber"))));
                 }
 
                 return entityId;
@@ -6281,6 +7880,32 @@ namespace client.State
             }
 
             return _decimalParser.Parse(obj.Value.GetDecimal()!);
+        }
+
+        private global::StrawberryShake.EntityId UpdateNonNullableIGetOrders_Orders_Nodes_CardEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
+            entityIds.Add(entityId);
+            if (entityId.Name.Equals("Card", global::System.StringComparison.Ordinal))
+            {
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.CardEntity? entity))
+                {
+                    session.SetEntity(entityId, new global::client.State.CardEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name"))));
+                }
+                else
+                {
+                    session.SetEntity(entityId, new global::client.State.CardEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name"))));
+                }
+
+                return entityId;
+            }
+
+            throw new global::System.NotSupportedException();
         }
     }
 
@@ -6437,6 +8062,150 @@ namespace client.State
             }
 
             return _decimalParser.Parse(obj.Value.GetDecimal()!);
+        }
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class GetSotrudniksBuilder : global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetSotrudniksResult>
+    {
+        private readonly global::StrawberryShake.IEntityStore _entityStore;
+        private readonly global::StrawberryShake.IEntityIdSerializer _idSerializer;
+        private readonly global::StrawberryShake.IOperationResultDataFactory<global::client.IGetSotrudniksResult> _resultDataFactory;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.Int32, global::System.Int32> _intParser;
+        private readonly global::StrawberryShake.Serialization.ILeafValueParser<global::System.String, global::System.String> _stringParser;
+        public GetSotrudniksBuilder(global::StrawberryShake.IEntityStore entityStore, global::StrawberryShake.IEntityIdSerializer idSerializer, global::StrawberryShake.IOperationResultDataFactory<global::client.IGetSotrudniksResult> resultDataFactory, global::StrawberryShake.Serialization.ISerializerResolver serializerResolver)
+        {
+            _entityStore = entityStore ?? throw new global::System.ArgumentNullException(nameof(entityStore));
+            _idSerializer = idSerializer ?? throw new global::System.ArgumentNullException(nameof(idSerializer));
+            _resultDataFactory = resultDataFactory ?? throw new global::System.ArgumentNullException(nameof(resultDataFactory));
+            _intParser = serializerResolver.GetLeafValueParser<global::System.Int32, global::System.Int32>("Int") ?? throw new global::System.ArgumentException("No serializer for type `Int` found.");
+            _stringParser = serializerResolver.GetLeafValueParser<global::System.String, global::System.String>("String") ?? throw new global::System.ArgumentException("No serializer for type `String` found.");
+        }
+
+        public global::StrawberryShake.IOperationResult<IGetSotrudniksResult> Build(global::StrawberryShake.Response<global::System.Text.Json.JsonDocument> response)
+        {
+            (IGetSotrudniksResult Result, GetSotrudniksResultInfo Info)? data = null;
+            global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.IClientError>? errors = null;
+            if (response.Exception is null)
+            {
+                try
+                {
+                    if (response.Body != null)
+                    {
+                        if (response.Body.RootElement.TryGetProperty("data", out global::System.Text.Json.JsonElement dataElement) && dataElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                        {
+                            data = BuildData(dataElement);
+                        }
+
+                        if (response.Body.RootElement.TryGetProperty("errors", out global::System.Text.Json.JsonElement errorsElement))
+                        {
+                            errors = global::StrawberryShake.Json.JsonErrorParser.ParseErrors(errorsElement);
+                        }
+                    }
+                }
+                catch (global::System.Exception ex)
+                {
+                    errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(ex.Message, exception: ex, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+                }
+            }
+            else
+            {
+                errors = new global::StrawberryShake.IClientError[]{new global::StrawberryShake.ClientError(response.Exception.Message, exception: response.Exception, extensions: new global::System.Collections.Generic.Dictionary<global::System.String, global::System.Object?>{{"body", response.Body?.RootElement.ToString()}})};
+            }
+
+            return new global::StrawberryShake.OperationResult<IGetSotrudniksResult>(data?.Result, data?.Info, _resultDataFactory, errors);
+        }
+
+        private (IGetSotrudniksResult, GetSotrudniksResultInfo) BuildData(global::System.Text.Json.JsonElement obj)
+        {
+            var entityIds = new global::System.Collections.Generic.HashSet<global::StrawberryShake.EntityId>();
+            global::StrawberryShake.IEntityStoreSnapshot snapshot = default !;
+            global::client.State.SotrudnikConnectionData? sotrudniksId = default !;
+            _entityStore.Update(session =>
+            {
+                sotrudniksId = DeserializeIGetSotrudniks_Sotrudniks(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sotrudniks"), entityIds);
+                snapshot = session.CurrentSnapshot;
+            });
+            var resultInfo = new GetSotrudniksResultInfo(sotrudniksId, entityIds, snapshot.Version);
+            return (_resultDataFactory.Create(resultInfo), resultInfo);
+        }
+
+        private global::client.State.SotrudnikConnectionData? DeserializeIGetSotrudniks_Sotrudniks(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var typename = obj.Value.GetProperty("__typename").GetString();
+            if (typename?.Equals("SotrudnikConnection", global::System.StringComparison.Ordinal) ?? false)
+            {
+                return new global::client.State.SotrudnikConnectionData(typename, nodes: UpdateIGetSotrudniks_Sotrudniks_NodesEntityNonNullableArray(session, global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "nodes"), entityIds));
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? UpdateIGetSotrudniks_Sotrudniks_NodesEntityNonNullableArray(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                return null;
+            }
+
+            var sotrudniks = new global::System.Collections.Generic.List<global::StrawberryShake.EntityId>();
+            foreach (global::System.Text.Json.JsonElement child in obj.Value.EnumerateArray())
+            {
+                sotrudniks.Add(UpdateNonNullableIGetSotrudniks_Sotrudniks_NodesEntity(session, child, entityIds));
+            }
+
+            return sotrudniks;
+        }
+
+        private global::StrawberryShake.EntityId UpdateNonNullableIGetSotrudniks_Sotrudniks_NodesEntity(global::StrawberryShake.IEntityStoreUpdateSession session, global::System.Text.Json.JsonElement? obj, global::System.Collections.Generic.ISet<global::StrawberryShake.EntityId> entityIds)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            global::StrawberryShake.EntityId entityId = _idSerializer.Parse(obj.Value);
+            entityIds.Add(entityId);
+            if (entityId.Name.Equals("Sotrudnik", global::System.StringComparison.Ordinal))
+            {
+                if (session.CurrentSnapshot.TryGetEntity(entityId, out global::client.State.SotrudnikEntity? entity))
+                {
+                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stage")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addres"))));
+                }
+                else
+                {
+                    session.SetEntity(entityId, new global::client.State.SotrudnikEntity(DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "last_name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "name")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "sur_name")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "id")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "phone")), DeserializeNonNullableInt32(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "stage")), DeserializeNonNullableString(global::StrawberryShake.Json.JsonElementExtensions.GetPropertyOrNull(obj, "addres"))));
+                }
+
+                return entityId;
+            }
+
+            throw new global::System.NotSupportedException();
+        }
+
+        private global::System.Int32 DeserializeNonNullableInt32(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _intParser.Parse(obj.Value.GetInt32()!);
+        }
+
+        private global::System.String DeserializeNonNullableString(global::System.Text.Json.JsonElement? obj)
+        {
+            if (!obj.HasValue)
+            {
+                throw new global::System.ArgumentNullException();
+            }
+
+            return _stringParser.Parse(obj.Value.GetString()!);
         }
     }
 
@@ -6792,6 +8561,28 @@ namespace client.State
 
     ///<summary>A connection to a list of items.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class ClientConnectionData
+    {
+        public ClientConnectionData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? nodes = default !)
+        {
+            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
+            Nodes = nodes;
+        }
+
+        public global::System.String __typename
+        {
+            get;
+        }
+
+        ///<summary>A flattened list of the nodes.</summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? Nodes
+        {
+            get;
+        }
+    }
+
+    ///<summary>A connection to a list of items.</summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class FlightConnectionData
     {
         public FlightConnectionData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? nodes = default !)
@@ -6856,6 +8647,28 @@ namespace client.State
         }
     }
 
+    ///<summary>A connection to a list of items.</summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
+    public partial class SotrudnikConnectionData
+    {
+        public SotrudnikConnectionData(global::System.String __typename, global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? nodes = default !)
+        {
+            this.__typename = __typename ?? throw new global::System.ArgumentNullException(nameof(__typename));
+            Nodes = nodes;
+        }
+
+        public global::System.String __typename
+        {
+            get;
+        }
+
+        ///<summary>A flattened list of the nodes.</summary>
+        public global::System.Collections.Generic.IReadOnlyList<global::StrawberryShake.EntityId>? Nodes
+        {
+            get;
+        }
+    }
+
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public partial class LoginPayloadData
     {
@@ -6898,7 +8711,7 @@ namespace client.State
             global::System.String __typename = obj.GetProperty("__typename").GetString()!;
             return __typename switch
             {
-            "Air" => ParseAirEntityId(obj, __typename), "Sotrudnik" => ParseSotrudnikEntityId(obj, __typename), "Flight" => ParseFlightEntityId(obj, __typename), "Route" => ParseRouteEntityId(obj, __typename), "Order" => ParseOrderEntityId(obj, __typename), "Client" => ParseClientEntityId(obj, __typename), "Token" => ParseTokenEntityId(obj, __typename), _ => throw new global::System.NotSupportedException()}
+            "Air" => ParseAirEntityId(obj, __typename), "Sotrudnik" => ParseSotrudnikEntityId(obj, __typename), "Client" => ParseClientEntityId(obj, __typename), "Flight" => ParseFlightEntityId(obj, __typename), "Route" => ParseRouteEntityId(obj, __typename), "Order" => ParseOrderEntityId(obj, __typename), "Card" => ParseCardEntityId(obj, __typename), "Token" => ParseTokenEntityId(obj, __typename), _ => throw new global::System.NotSupportedException()}
 
             ;
         }
@@ -6907,7 +8720,7 @@ namespace client.State
         {
             return entityId.Name switch
             {
-            "Air" => FormatAirEntityId(entityId), "Sotrudnik" => FormatSotrudnikEntityId(entityId), "Flight" => FormatFlightEntityId(entityId), "Route" => FormatRouteEntityId(entityId), "Order" => FormatOrderEntityId(entityId), "Client" => FormatClientEntityId(entityId), "Token" => FormatTokenEntityId(entityId), _ => throw new global::System.NotSupportedException()}
+            "Air" => FormatAirEntityId(entityId), "Sotrudnik" => FormatSotrudnikEntityId(entityId), "Client" => FormatClientEntityId(entityId), "Flight" => FormatFlightEntityId(entityId), "Route" => FormatRouteEntityId(entityId), "Order" => FormatOrderEntityId(entityId), "Card" => FormatCardEntityId(entityId), "Token" => FormatTokenEntityId(entityId), _ => throw new global::System.NotSupportedException()}
 
             ;
         }
@@ -6935,6 +8748,23 @@ namespace client.State
         }
 
         private global::System.String FormatSotrudnikEntityId(global::StrawberryShake.EntityId entityId)
+        {
+            using var writer = new global::StrawberryShake.Internal.ArrayWriter();
+            using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
+            jsonWriter.WriteStartObject();
+            jsonWriter.WriteString("__typename", entityId.Name);
+            jsonWriter.WriteNumber("id", (global::System.Int32)entityId.Value);
+            jsonWriter.WriteEndObject();
+            jsonWriter.Flush();
+            return global::System.Text.Encoding.UTF8.GetString(writer.GetInternalBuffer(), 0, writer.Length);
+        }
+
+        private global::StrawberryShake.EntityId ParseClientEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
+        {
+            return new global::StrawberryShake.EntityId(type, obj.GetProperty("id").GetInt32()!);
+        }
+
+        private global::System.String FormatClientEntityId(global::StrawberryShake.EntityId entityId)
         {
             using var writer = new global::StrawberryShake.Internal.ArrayWriter();
             using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
@@ -6997,12 +8827,12 @@ namespace client.State
             return global::System.Text.Encoding.UTF8.GetString(writer.GetInternalBuffer(), 0, writer.Length);
         }
 
-        private global::StrawberryShake.EntityId ParseClientEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
+        private global::StrawberryShake.EntityId ParseCardEntityId(global::System.Text.Json.JsonElement obj, global::System.String type)
         {
             return new global::StrawberryShake.EntityId(type, obj.GetProperty("id").GetInt32()!);
         }
 
-        private global::System.String FormatClientEntityId(global::StrawberryShake.EntityId entityId)
+        private global::System.String FormatCardEntityId(global::StrawberryShake.EntityId entityId)
         {
             using var writer = new global::StrawberryShake.Internal.ArrayWriter();
             using var jsonWriter = new global::System.Text.Json.Utf8JsonWriter(writer, _options);
@@ -7057,9 +8887,11 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => new global::client.State.GqlClientStoreAccessor(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityStore>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IEntityIdSerializer>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationRequestFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::System.Collections.Generic.IEnumerable<global::StrawberryShake.IOperationResultDataFactory>>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp))));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.AddOrderMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetAirsQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetClientsQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetFlightsQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetOrdersQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetRoutesQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetSotrudniksQuery>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.RefreshTokenMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.SignInMutation>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GqlClient>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<ClientServiceProvider>(sp)));
@@ -7078,14 +8910,17 @@ namespace Microsoft.Extensions.DependencyInjection
             });
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.AirEntity, global::client.GetAirs_Airs_Nodes_Air>, global::client.State.GetAirs_Airs_Nodes_AirFromAirEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.SotrudnikEntity, global::client.GetAirs_Airs_Nodes_Sotrudnik_Sotrudnik>, global::client.State.GetAirs_Airs_Nodes_Sotrudnik_SotrudnikFromSotrudnikEntityMapper>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, global::client.GetClients_Clients_Nodes_Client>, global::client.State.GetClients_Clients_Nodes_ClientFromClientEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, global::client.GetFlights_Flights_Nodes_Flight>, global::client.State.GetFlights_Flights_Nodes_FlightFromFlightEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, global::client.GetFlights_Flights_Nodes_Route_Route>, global::client.State.GetFlights_Flights_Nodes_Route_RouteFromRouteEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.AirEntity, global::client.GetFlights_Flights_Nodes_Air_Air>, global::client.State.GetFlights_Flights_Nodes_Air_AirFromAirEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.OrderEntity, global::client.GetOrders_Orders_Nodes_Order>, global::client.State.GetOrders_Orders_Nodes_OrderFromOrderEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.ClientEntity, global::client.GetOrders_Orders_Nodes_Client_Client>, global::client.State.GetOrders_Orders_Nodes_Client_ClientFromClientEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.FlightEntity, global::client.GetOrders_Orders_Nodes_Flight_Flight>, global::client.State.GetOrders_Orders_Nodes_Flight_FlightFromFlightEntityMapper>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.CardEntity, global::client.GetOrders_Orders_Nodes_Card_Card>, global::client.State.GetOrders_Orders_Nodes_Card_CardFromCardEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, global::client.GetOrders_Orders_Nodes_Flight_Route_Route>, global::client.State.GetOrders_Orders_Nodes_Flight_Route_RouteFromRouteEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.RouteEntity, global::client.GetRoutes_Routes_Nodes_Route>, global::client.State.GetRoutes_Routes_Nodes_RouteFromRouteEntityMapper>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.SotrudnikEntity, global::client.GetSotrudniks_Sotrudniks_Nodes_Sotrudnik>, global::client.State.GetSotrudniks_Sotrudniks_Nodes_SotrudnikFromSotrudnikEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.TokenEntity, global::client.RefreshToken_RefreshToken_Token_Token>, global::client.State.RefreshToken_RefreshToken_Token_TokenFromTokenEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IEntityMapper<global::client.State.TokenEntity, global::client.SignIn_SignIn_Token_Token>, global::client.State.SignIn_SignIn_Token_TokenFromTokenEntityMapper>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.Serialization.ISerializer, global::StrawberryShake.Serialization.StringSerializer>(services);
@@ -7118,6 +8953,13 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::client.IGetAirsResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::client.IGetAirsResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetAirsResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.GetAirsQuery>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.IGetAirsQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetAirsQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetClientsResult>, global::client.State.GetClientsResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetClientsResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.IGetClientsQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetClientsResult>, global::client.State.GetClientsBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::client.IGetClientsResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::client.IGetClientsResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetClientsResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.GetClientsQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.IGetClientsQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetClientsQuery>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetFlightsResult>, global::client.State.GetFlightsResultFactory>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetFlightsResult>>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.IGetFlightsQuery>(sp));
@@ -7139,6 +8981,13 @@ namespace Microsoft.Extensions.DependencyInjection
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::client.IGetRoutesResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::client.IGetRoutesResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetRoutesResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.GetRoutesQuery>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.IGetRoutesQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetRoutesQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetSotrudniksResult>, global::client.State.GetSotrudniksResultFactory>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::client.IGetSotrudniksResult>>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.IGetSotrudniksQuery>(sp));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetSotrudniksResult>, global::client.State.GetSotrudniksBuilder>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationExecutor<global::client.IGetSotrudniksResult>>(services, sp => new global::StrawberryShake.OperationExecutor<global::System.Text.Json.JsonDocument, global::client.IGetSotrudniksResult>(global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.Transport.Http.IHttpConnection>(sp), () => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultBuilder<global::System.Text.Json.JsonDocument, global::client.IGetSotrudniksResult>>(sp), global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationStore>(sp), strategy));
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.GetSotrudniksQuery>(services);
+            global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::client.IGetSotrudniksQuery>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.GetSotrudniksQuery>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory<global::client.IRefreshTokenResult>, global::client.State.RefreshTokenResultFactory>(services);
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationResultDataFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::StrawberryShake.IOperationResultDataFactory<global::client.IRefreshTokenResult>>(sp));
             global::Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton<global::StrawberryShake.IOperationRequestFactory>(services, sp => global::Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<global::client.IRefreshTokenMutation>(sp));

@@ -1,0 +1,14 @@
+query GetClients{
+  clients{
+    nodes{
+      id
+      lastName
+      name
+      surName
+      phone
+      addres
+      passportSeia
+      passportNumber
+    }
+  }
+}

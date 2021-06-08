@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace client
 {
@@ -26,7 +27,7 @@ namespace client
 			formSellTicket.Close();
 		}
 
-		private void FormSellTicket_Load(object sender, EventArgs e)
+		private async void FormSellTicket_Load(object sender, EventArgs e)
 		{
 			toolTip.SetToolTip(this.btnAddSellTicket, "Добавить");
 			toolTip.SetToolTip(this.btnEditSellTicket, "Изменить");
@@ -34,6 +35,24 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск маршрута");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+
+			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
+			var data = (await client.GetOrders.ExecuteAsync().ConfigureAwait(true))?.Data?.Orders;
+			foreach (var order in data?.Nodes ?? Array.Empty<IGetOrders_Orders_Nodes>())
+			{
+				dataGridView1.Rows.Add(new object[] { order.Id,
+				order.Flight.Route.Start,
+				order.Flight.Route.Target,
+				order.Flight.Route.Time,
+				order.Mesto,
+				order.Client.LastName,
+				order.Client.Name,
+				order.Client.SurName,
+				order.Client.Phone,
+				order.Card.Name,
+				order.Flight.Route.Price
+				});
+			}
 		}
 	}
 }

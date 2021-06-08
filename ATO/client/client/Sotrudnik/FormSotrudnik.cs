@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace client
 {
@@ -27,7 +28,7 @@ namespace client
 			formSotrudnik.Close();
 		}
 
-		private void FormSotrudnik_Load(object sender, EventArgs e)
+		private async void FormSotrudnik_Load(object sender, EventArgs e)
 		{
 			toolTip.SetToolTip(this.btnAddSotrudnik, "Добавить сотрудника");
 			toolTip.SetToolTip(this.btnEditSotrudnik, "Изменить информацию о сотруднике");
@@ -35,6 +36,20 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск клиента");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+			
+			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
+			var data = (await client.GetSotrudniks.ExecuteAsync().ConfigureAwait(true))?.Data?.Sotrudniks;
+			foreach (var sotrudnik in data?.Nodes ?? Array.Empty<IGetSotrudniks_Sotrudniks_Nodes>())
+			{
+				dataGridView1.Rows.Add(new object[] { sotrudnik.Id,
+				sotrudnik.Last_name,
+				sotrudnik.Name,
+				sotrudnik.Sur_name,
+				sotrudnik.Phone,
+				sotrudnik.Stage,
+				sotrudnik.Addres
+				});
+			}
 		}
 
 		private void btnAddSotrudnik_Click(object sender, EventArgs e)

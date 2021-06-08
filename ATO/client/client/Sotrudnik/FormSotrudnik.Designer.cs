@@ -47,6 +47,13 @@ namespace client
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.sur_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.stage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.addres = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -188,11 +195,54 @@ namespace client
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.number,
+            this.last_name,
+            this.name,
+            this.sur_name,
+            this.phone,
+            this.stage,
+            this.addres});
 			this.dataGridView1.Location = new System.Drawing.Point(227, 82);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 25;
 			this.dataGridView1.Size = new System.Drawing.Size(561, 279);
 			this.dataGridView1.TabIndex = 5;
+			// 
+			// number
+			// 
+			this.number.HeaderText = "№";
+			this.number.Name = "number";
+			// 
+			// last_name
+			// 
+			this.last_name.HeaderText = "Фамилия";
+			this.last_name.Name = "last_name";
+			// 
+			// name
+			// 
+			this.name.HeaderText = "Имя";
+			this.name.Name = "name";
+			// 
+			// sur_name
+			// 
+			this.sur_name.HeaderText = "Отчество";
+			this.sur_name.Name = "sur_name";
+			// 
+			// phone
+			// 
+			this.phone.HeaderText = "Телефон";
+			this.phone.Name = "phone";
+			// 
+			// stage
+			// 
+			this.stage.HeaderText = "Стаж";
+			this.stage.Name = "stage";
+			// 
+			// addres
+			// 
+			this.addres.HeaderText = "Адресс";
+			this.addres.Name = "addres";
 			// 
 			// FormSotrudnik
 			// 
@@ -234,5 +284,12 @@ namespace client
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.ToolTip toolTip;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
+		private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+		private System.Windows.Forms.DataGridViewTextBoxColumn name;
+		private System.Windows.Forms.DataGridViewTextBoxColumn sur_name;
+		private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+		private System.Windows.Forms.DataGridViewTextBoxColumn stage;
+		private System.Windows.Forms.DataGridViewTextBoxColumn addres;
 	}
 }

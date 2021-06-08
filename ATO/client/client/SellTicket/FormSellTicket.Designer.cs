@@ -44,6 +44,17 @@ namespace client
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.start = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.target = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.mesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.surName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.typebilet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -168,11 +179,78 @@ namespace client
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.number,
+            this.start,
+            this.target,
+            this.time,
+            this.mesto,
+            this.lastName,
+            this.name,
+            this.surName,
+            this.phone,
+            this.typebilet,
+            this.price});
 			this.dataGridView1.Location = new System.Drawing.Point(227, 87);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 25;
 			this.dataGridView1.Size = new System.Drawing.Size(561, 279);
 			this.dataGridView1.TabIndex = 14;
+			// 
+			// number
+			// 
+			this.number.HeaderText = "№";
+			this.number.Name = "number";
+			// 
+			// start
+			// 
+			this.start.HeaderText = "Место отправления";
+			this.start.Name = "start";
+			// 
+			// target
+			// 
+			this.target.HeaderText = "Место прибытия";
+			this.target.Name = "target";
+			// 
+			// time
+			// 
+			this.time.HeaderText = "Время";
+			this.time.Name = "time";
+			// 
+			// mesto
+			// 
+			this.mesto.HeaderText = "Место";
+			this.mesto.Name = "mesto";
+			// 
+			// lastName
+			// 
+			this.lastName.HeaderText = "Фамилия";
+			this.lastName.Name = "lastName";
+			// 
+			// name
+			// 
+			this.name.HeaderText = "Имя";
+			this.name.Name = "name";
+			// 
+			// surName
+			// 
+			this.surName.HeaderText = "Отчество";
+			this.surName.Name = "surName";
+			// 
+			// phone
+			// 
+			this.phone.HeaderText = "Телефон";
+			this.phone.Name = "phone";
+			// 
+			// typebilet
+			// 
+			this.typebilet.HeaderText = "Тип билета";
+			this.typebilet.Name = "typebilet";
+			// 
+			// price
+			// 
+			this.price.HeaderText = "Базовая цена";
+			this.price.Name = "price";
 			// 
 			// FormSellTicket
 			// 
@@ -212,5 +290,16 @@ namespace client
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.ToolTip toolTip;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
+		private System.Windows.Forms.DataGridViewTextBoxColumn start;
+		private System.Windows.Forms.DataGridViewTextBoxColumn target;
+		private System.Windows.Forms.DataGridViewTextBoxColumn time;
+		private System.Windows.Forms.DataGridViewTextBoxColumn mesto;
+		private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+		private System.Windows.Forms.DataGridViewTextBoxColumn name;
+		private System.Windows.Forms.DataGridViewTextBoxColumn surName;
+		private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+		private System.Windows.Forms.DataGridViewTextBoxColumn typebilet;
+		private System.Windows.Forms.DataGridViewTextBoxColumn price;
 	}
 }

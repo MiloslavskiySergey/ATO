@@ -42,11 +42,9 @@ namespace client
 			this.txtMesto = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtCount = new System.Windows.Forms.TextBox();
-			this.txtStart = new System.Windows.Forms.TextBox();
-			this.txtTarget = new System.Windows.Forms.TextBox();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.label13 = new System.Windows.Forms.Label();
 			this.cmbTypeTicket = new System.Windows.Forms.ComboBox();
+			this.label13 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
@@ -64,6 +62,8 @@ namespace client
 			this.btnSearchFlight = new System.Windows.Forms.Button();
 			this.btnBuyTicket = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.cmbStart = new System.Windows.Forms.ComboBox();
+			this.cmbTarget = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -136,11 +136,11 @@ namespace client
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbStart);
+			this.groupBox1.Controls.Add(this.cmbTarget);
 			this.groupBox1.Controls.Add(this.txtMesto);
 			this.groupBox1.Controls.Add(this.label14);
 			this.groupBox1.Controls.Add(this.txtCount);
-			this.groupBox1.Controls.Add(this.txtStart);
-			this.groupBox1.Controls.Add(this.txtTarget);
 			this.groupBox1.Controls.Add(this.dateTimePicker1);
 			this.groupBox1.Controls.Add(this.cmbTypeTicket);
 			this.groupBox1.Controls.Add(this.label13);
@@ -178,35 +178,12 @@ namespace client
 			this.txtCount.Size = new System.Drawing.Size(172, 23);
 			this.txtCount.TabIndex = 22;
 			// 
-			// txtStart
-			// 
-			this.txtStart.Location = new System.Drawing.Point(141, 26);
-			this.txtStart.Name = "txtStart";
-			this.txtStart.Size = new System.Drawing.Size(172, 23);
-			this.txtStart.TabIndex = 22;
-			// 
-			// txtTarget
-			// 
-			this.txtTarget.Location = new System.Drawing.Point(141, 55);
-			this.txtTarget.Name = "txtTarget";
-			this.txtTarget.Size = new System.Drawing.Size(172, 23);
-			this.txtTarget.TabIndex = 23;
-			// 
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Location = new System.Drawing.Point(141, 84);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(172, 23);
 			this.dateTimePicker1.TabIndex = 22;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(6, 90);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(35, 15);
-			this.label13.TabIndex = 22;
-			this.label13.Text = "Дата:";
 			// 
 			// cmbTypeTicket
 			// 
@@ -218,6 +195,15 @@ namespace client
 			this.cmbTypeTicket.Name = "cmbTypeTicket";
 			this.cmbTypeTicket.Size = new System.Drawing.Size(172, 23);
 			this.cmbTypeTicket.TabIndex = 20;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(6, 90);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(35, 15);
+			this.label13.TabIndex = 22;
+			this.label13.Text = "Дата:";
 			// 
 			// label12
 			// 
@@ -383,6 +369,22 @@ namespace client
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
+			// cmbStart
+			// 
+			this.cmbStart.FormattingEnabled = true;
+			this.cmbStart.Location = new System.Drawing.Point(141, 26);
+			this.cmbStart.Name = "cmbStart";
+			this.cmbStart.Size = new System.Drawing.Size(172, 23);
+			this.cmbStart.TabIndex = 22;
+			// 
+			// cmbTarget
+			// 
+			this.cmbTarget.FormattingEnabled = true;
+			this.cmbTarget.Location = new System.Drawing.Point(141, 55);
+			this.cmbTarget.Name = "cmbTarget";
+			this.cmbTarget.Size = new System.Drawing.Size(172, 23);
+			this.cmbTarget.TabIndex = 23;
+			// 
 			// FormOrderTicket
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -443,10 +445,10 @@ namespace client
 		private System.Windows.Forms.TextBox txtPrice;
 		private System.Windows.Forms.DateTimePicker dateTimePicker2;
 		private System.Windows.Forms.TextBox txtNumRoute;
-		private System.Windows.Forms.TextBox txtStart;
-		private System.Windows.Forms.TextBox txtTarget;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.TextBox txtCount;
 		private System.Windows.Forms.TextBox txtMesto;
+		private System.Windows.Forms.ComboBox cmbStart;
+		private System.Windows.Forms.ComboBox cmbTarget;
 	}
 }

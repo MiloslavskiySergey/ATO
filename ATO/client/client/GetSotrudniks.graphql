@@ -1,0 +1,13 @@
+query GetSotrudniks{
+  sotrudniks{
+    nodes{
+      id
+      last_name
+      name
+      sur_name
+      phone
+      stage
+      addres
+    }
+  }
+}

@@ -47,6 +47,14 @@ namespace client
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.surName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.addres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.passportSeia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.passportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -186,11 +194,60 @@ namespace client
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.number,
+            this.lastName,
+            this.name,
+            this.surName,
+            this.phone,
+            this.addres,
+            this.passportSeia,
+            this.passportNumber});
 			this.dataGridView1.Location = new System.Drawing.Point(227, 87);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 25;
 			this.dataGridView1.Size = new System.Drawing.Size(561, 279);
 			this.dataGridView1.TabIndex = 8;
+			// 
+			// number
+			// 
+			this.number.HeaderText = "№";
+			this.number.Name = "number";
+			// 
+			// lastName
+			// 
+			this.lastName.HeaderText = "Фамилия";
+			this.lastName.Name = "lastName";
+			// 
+			// name
+			// 
+			this.name.HeaderText = "Имя";
+			this.name.Name = "name";
+			// 
+			// surName
+			// 
+			this.surName.HeaderText = "Отчество";
+			this.surName.Name = "surName";
+			// 
+			// phone
+			// 
+			this.phone.HeaderText = "Телефон";
+			this.phone.Name = "phone";
+			// 
+			// addres
+			// 
+			this.addres.HeaderText = "Адресс";
+			this.addres.Name = "addres";
+			// 
+			// passportSeia
+			// 
+			this.passportSeia.HeaderText = "Паспорт серия";
+			this.passportSeia.Name = "passportSeia";
+			// 
+			// passportNumber
+			// 
+			this.passportNumber.HeaderText = "Паспорт номер";
+			this.passportNumber.Name = "passportNumber";
 			// 
 			// FormClient
 			// 
@@ -232,5 +289,13 @@ namespace client
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.ToolTip toolTip;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
+		private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
+		private System.Windows.Forms.DataGridViewTextBoxColumn name;
+		private System.Windows.Forms.DataGridViewTextBoxColumn surName;
+		private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+		private System.Windows.Forms.DataGridViewTextBoxColumn addres;
+		private System.Windows.Forms.DataGridViewTextBoxColumn passportSeia;
+		private System.Windows.Forms.DataGridViewTextBoxColumn passportNumber;
 	}
 }

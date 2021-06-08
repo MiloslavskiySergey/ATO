@@ -57,7 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAACSFJREFUaEPt
@@ -239,7 +239,7 @@
   <data name="btnSearch.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAABthJREFUaEPtWHtQVFUYv2fZRRI1HqO46GAzpY5i9Jgh7I/GmlGSmSLNppc5ozWi
+        wQAADsEBuJFr7QAABthJREFUaEPtWHtQVFUYv2fZRRI1HqO46GAzpY5i9Jgh7I/GmlGSmSLNppc5ozWi
         /ZdZahn5WAQEFDB0NBph7IEvLIUUa0UWEDARxsQEn9mAz0YBAZGFc/q+5ezO5dx798GC+Ye/mW/u79zz
         PX73u2fPPSA9wiM8BDCmFPuFZlbNCM2sNMG1cHRGZf2o9IrmkekV3WjI8R7MF4IlGDMro0PSSvx4+P8H
         EBIFgnJAZPOI1HI2JLmM+SSWUl1iKUMj6ywOrku0UJiz+QxPLacQ0wKxuaGbKqN4ugcHEB4JZn487Rg1
@@ -271,6 +271,27 @@
         DAcLAcMPz5Ng47khx3s4hz4PjehH8A6S9B93opS4/RhetAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="number.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="last_name.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="name.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="sur_name.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="phone.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="stage.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="addres.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIACeHAAAlgAAAICAAAABACAAKAgBADQdAABgYAAAAQAgAKiUAABcJQEASEgAAAEA

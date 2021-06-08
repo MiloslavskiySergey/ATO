@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace client
 			formClient.Close();
 		}
 
-		private void FormClient_Load(object sender, EventArgs e)
+		private async void FormClient_Load(object sender, EventArgs e)
 		{
 			toolTip.SetToolTip(this.btnAddClient, "Добавить клиента");
 			toolTip.SetToolTip(this.btnEditClient, "Изменить информацию клиента");
@@ -34,6 +35,21 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск клиента");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+			
+			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
+			var data = (await client.GetClients.ExecuteAsync().ConfigureAwait(true))?.Data?.Clients;
+			foreach (var clientt in data?.Nodes ?? Array.Empty<IGetClients_Clients_Nodes>())
+			{
+				dataGridView1.Rows.Add(new object[] { clientt.Id,
+				clientt.LastName,
+				clientt.Name,
+				clientt.SurName,
+				clientt.Phone,
+				clientt.Addres,
+				clientt.PassportSeia,
+				clientt.PassportNumber
+				});
+			}
 		}
 	}
 }

@@ -8,6 +8,7 @@ query GetOrders{
         lastName
         name
         surName
+        phone
         passportNumber
         passportSeia
       }
@@ -21,6 +22,9 @@ query GetOrders{
           time
           price
         }
+      }
+      card{
+        name
       }
     }
   }
