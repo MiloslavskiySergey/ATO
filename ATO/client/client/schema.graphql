@@ -18,6 +18,8 @@ type Mutation {
   signUp(email: String! password: String!): Payload!
   signIn(email: String! password: String!): LoginPayload!
   signOut: Payload!
+  refreshToken(refreshToken: String!): LoginPayload!
+  addOrder(mesto: String! counts: Int! airId: Int! dateStart: DateTime! timeStart: DateTime! start: String! target: String! name: String! price: Decimal! percent: Decimal!): Payload!
 }
 
 type Air {
@@ -36,7 +38,7 @@ type Air {
 type Card {
   id: Int!
   name: String!
-  percent: Int!
+  percent: Decimal!
   orders: [Order!]!
 }
 
@@ -116,7 +118,7 @@ input CardFilterInput {
   or: [CardFilterInput!]
   id: ComparableInt32OperationFilterInput
   name: StringOperationFilterInput
-  percent: ComparableInt32OperationFilterInput
+  percent: ComparableDecimalOperationFilterInput
   orders: ListFilterInputTypeOfOrderFilterInput
 }
 
@@ -313,13 +315,6 @@ input ListFilterInputTypeOfFlightFilterInput {
   any: Boolean
 }
 
-input ListFilterInputTypeOfOrderFilterInput {
-  all: OrderFilterInput
-  none: OrderFilterInput
-  some: OrderFilterInput
-  any: Boolean
-}
-
 input ComparableDecimalOperationFilterInput {
   eq: Decimal
   neq: Decimal
@@ -333,6 +328,13 @@ input ComparableDecimalOperationFilterInput {
   nlt: Decimal
   lte: Decimal
   nlte: Decimal
+}
+
+input ListFilterInputTypeOfOrderFilterInput {
+  all: OrderFilterInput
+  none: OrderFilterInput
+  some: OrderFilterInput
+  any: Boolean
 }
 
 input ListFilterInputTypeOfAirFilterInput {
@@ -411,7 +413,7 @@ type SotrudnikEdge {
 }
 
 type Payload {
-  success: Boolean!
+  success: Boolean
   errors: [Error!]
 }
 
@@ -437,7 +439,7 @@ type User {
 
 type LoginPayload {
   token: Token
-  success: Boolean!
+  success: Boolean
   errors: [Error!]
 }
 
