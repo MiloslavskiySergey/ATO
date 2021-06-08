@@ -33,6 +33,7 @@ namespace client
 			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+			ConfigureServices();
 			Application.Run(new FormAvtorization());
 		}
 	}

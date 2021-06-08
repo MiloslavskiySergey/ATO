@@ -1,0 +1,27 @@
+query GetOrders{
+  orders{
+    nodes{
+      id
+      mesto
+      counts
+      client{
+        lastName
+        name
+        surName
+        passportNumber
+        passportSeia
+      }
+      flight{
+        id
+        dateStart
+        timeStart
+        route{
+          start
+          target
+          time
+          price
+        }
+      }
+    }
+  }
+}

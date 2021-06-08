@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using server.Models;
 
@@ -7,9 +8,15 @@ namespace server.Schema.Types
     {
         public Token? Token { get; set; }
 
-        public LoginPayload(Token? token = null, 
-            bool success = true, 
-            IReadOnlyList<Error>? errors = null) : base(success, errors)
+        public LoginPayload(IReadOnlyList<Error> errors,
+            Token? token = null,
+            bool success = true) : base(errors, success)
+        {
+            Token = token;
+        }
+
+        public LoginPayload(Token? token = null,
+           bool success = true) : base(success)
         {
             Token = token;
         }

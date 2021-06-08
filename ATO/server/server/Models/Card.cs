@@ -14,7 +14,7 @@ namespace server.Models
 		public string Name { get; set; } = default!;
 
 		[Required, StringLength(5)]
-		public int Percent { get; set; }
+		public decimal Percent { get; set; }
 
 		public ICollection<Order> Orders { get; set; } = new List<Order>();
 	}

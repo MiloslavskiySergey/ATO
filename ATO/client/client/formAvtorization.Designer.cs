@@ -29,6 +29,7 @@ namespace client
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAvtorization));
 			this.btnAvtorization = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@ namespace client
 			this.txtLogin = new System.Windows.Forms.TextBox();
 			this.txtPasword = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.SuspendLayout();
 			// 
 			// btnAvtorization
@@ -121,6 +123,7 @@ namespace client
 		private System.Windows.Forms.TextBox txtLogin;
 		private System.Windows.Forms.TextBox txtPasword;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Timer timer1;
 	}
 }
 

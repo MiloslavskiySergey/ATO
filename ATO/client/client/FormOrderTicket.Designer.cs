@@ -334,6 +334,7 @@ namespace client
 			// 
 			// btnSearchFlight
 			// 
+			this.btnSearchFlight.Enabled = false;
 			this.btnSearchFlight.Location = new System.Drawing.Point(12, 227);
 			this.btnSearchFlight.Name = "btnSearchFlight";
 			this.btnSearchFlight.Size = new System.Drawing.Size(340, 41);

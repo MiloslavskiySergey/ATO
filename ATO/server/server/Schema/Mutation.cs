@@ -34,7 +34,7 @@ namespace server.Schema
             {
                 errors.Add(new Types.Error(err.Code, err.Description));
             }
-            return new Payload(result.Succeeded, errors);
+            return new Payload(errors, result.Succeeded);
         }
 
         [UseDbContext(typeof(ApplicationDbContext))]
@@ -49,5 +49,52 @@ namespace server.Schema
             await identity.SignOutAsync();
             return new Payload();
         }
-    }
+
+        [UseDbContext(typeof(ApplicationDbContext))]
+        public async Task<LoginPayload> RefreshToken([Service] ITokenService tokenService, string refreshToken)
+        {
+            return new LoginPayload(await tokenService.UpdateAsync(refreshToken));
+        }
+
+		[UseDbContext(typeof(ApplicationDbContext))]
+		public async Task<Payload> AddOrder([ScopedService] ApplicationDbContext context, 
+            string mesto, 
+            int counts, 
+            int airId,
+            DateTime dateStart,
+            DateTime timeStart,
+            string start,
+            string target,
+            string name,
+            decimal price, 
+            decimal Percent)
+		{
+            var order = new Order()
+            {
+                Mesto = mesto,
+                Counts = counts,
+                Flight = new()
+                {
+                    AirId = airId,
+                    DateStart = dateStart,
+                    TimeStart = timeStart,
+                    Route = new()
+                    {
+                        Start = start,
+                        Target = target,
+                        Price = price
+                    },
+
+                },
+                Card = new() 
+                { 
+                    Name = name, 
+                    Percent = Percent 
+                }
+            };
+            await context.Orders.AddAsync(order);
+            //await context.Orders.SaveChangesAsync();
+            return new Payload();
+        }
+	}
 }

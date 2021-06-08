@@ -11,7 +11,10 @@ namespace client
             SignIn = signIn;
         }
 
-        public global::client.ISignIn_SignIn SignIn { get; }
+        public global::client.ISignIn_SignIn SignIn
+        {
+            get;
+        }
 
         public virtual global::System.Boolean Equals(SignInResult? other)
         {
@@ -74,11 +77,20 @@ namespace client
             Errors = errors;
         }
 
-        public global::client.ISignIn_SignIn_Token? Token { get; }
+        public global::client.ISignIn_SignIn_Token? Token
+        {
+            get;
+        }
 
-        public global::System.Boolean Success { get; }
+        public global::System.Boolean Success
+        {
+            get;
+        }
 
-        public global::System.Collections.Generic.IReadOnlyList<global::client.ISignIn_SignIn_Errors>? Errors { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::client.ISignIn_SignIn_Errors>? Errors
+        {
+            get;
+        }
 
         public virtual global::System.Boolean Equals(SignIn_SignIn_LoginPayload? other)
         {
@@ -153,9 +165,15 @@ namespace client
             AccessToken = accessToken;
         }
 
-        public global::System.String RefreshToken { get; }
+        public global::System.String RefreshToken
+        {
+            get;
+        }
 
-        public global::System.String AccessToken { get; }
+        public global::System.String AccessToken
+        {
+            get;
+        }
 
         public virtual global::System.Boolean Equals(SignIn_SignIn_Token_Token? other)
         {
@@ -218,9 +236,15 @@ namespace client
             Info = info;
         }
 
-        public global::System.String Field { get; }
+        public global::System.String Field
+        {
+            get;
+        }
 
-        public global::System.String Info { get; }
+        public global::System.String Info
+        {
+            get;
+        }
 
         public virtual global::System.Boolean Equals(SignIn_SignIn_Errors_Error? other)
         {
@@ -277,17 +301,29 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface ISignInResult
     {
-        public global::client.ISignIn_SignIn SignIn { get; }
+        public global::client.ISignIn_SignIn SignIn
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface ISignIn_SignIn
     {
-        public global::client.ISignIn_SignIn_Token? Token { get; }
+        public global::client.ISignIn_SignIn_Token? Token
+        {
+            get;
+        }
 
-        public global::System.Boolean Success { get; }
+        public global::System.Boolean Success
+        {
+            get;
+        }
 
-        public global::System.Collections.Generic.IReadOnlyList<global::client.ISignIn_SignIn_Errors>? Errors { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::client.ISignIn_SignIn_Errors>? Errors
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -298,9 +334,15 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface ISignIn_SignIn_Token
     {
-        public global::System.String RefreshToken { get; }
+        public global::System.String RefreshToken
+        {
+            get;
+        }
 
-        public global::System.String AccessToken { get; }
+        public global::System.String AccessToken
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -311,9 +353,15 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface ISignIn_SignIn_Errors
     {
-        public global::System.String Field { get; }
+        public global::System.String Field
+        {
+            get;
+        }
 
-        public global::System.String Info { get; }
+        public global::System.String Info
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -352,10 +400,20 @@ namespace client
         {
         }
 
-        public static SignInMutationDocument Instance { get; } = new SignInMutationDocument();
+        public static SignInMutationDocument Instance
+        {
+            get;
+        }
+
+        = new SignInMutationDocument();
         public global::StrawberryShake.OperationKind Kind => global::StrawberryShake.OperationKind.Mutation;
         public global::System.ReadOnlySpan<global::System.Byte> Body => new global::System.Byte[]{0x6d, 0x75, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x53, 0x69, 0x67, 0x6e, 0x49, 0x6e, 0x28, 0x24, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x3a, 0x20, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x21, 0x2c, 0x20, 0x24, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x3a, 0x20, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x21, 0x29, 0x20, 0x7b, 0x20, 0x73, 0x69, 0x67, 0x6e, 0x49, 0x6e, 0x28, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x3a, 0x20, 0x24, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x2c, 0x20, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x3a, 0x20, 0x24, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x29, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x72, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x20, 0x2e, 0x2e, 0x2e, 0x20, 0x6f, 0x6e, 0x20, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x20, 0x7b, 0x20, 0x69, 0x64, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x73, 0x20, 0x7b, 0x20, 0x5f, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x66, 0x69, 0x65, 0x6c, 0x64, 0x20, 0x69, 0x6e, 0x66, 0x6f, 0x20, 0x7d, 0x20, 0x7d, 0x20, 0x7d};
-        public global::StrawberryShake.DocumentHash Hash { get; } = new global::StrawberryShake.DocumentHash("md5Hash", "ee9f51d832f72fa7c258a1b97276da51");
+        public global::StrawberryShake.DocumentHash Hash
+        {
+            get;
+        }
+
+        = new global::StrawberryShake.DocumentHash("md5Hash", "ee9f51d832f72fa7c258a1b97276da51");
         public override global::System.String ToString()
         {
 #if NETSTANDARD2_0
@@ -506,7 +564,10 @@ namespace client
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
     public interface IGqlClient
     {
-        global::client.ISignInMutation SignIn { get; }
+        global::client.ISignInMutation SignIn
+        {
+            get;
+        }
     }
 }
 
@@ -521,9 +582,15 @@ namespace client.State
             AccessToken = accessToken;
         }
 
-        public global::System.String RefreshToken { get; }
+        public global::System.String RefreshToken
+        {
+            get;
+        }
 
-        public global::System.String AccessToken { get; }
+        public global::System.String AccessToken
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -632,7 +699,10 @@ namespace client.State
             _version = version;
         }
 
-        public global::client.State.LoginPayloadData SignIn { get; }
+        public global::client.State.LoginPayloadData SignIn
+        {
+            get;
+        }
 
         public global::System.Collections.Generic.IReadOnlyCollection<global::StrawberryShake.EntityId> EntityIds => _entityIds;
         public global::System.UInt64 Version => _version;
@@ -833,13 +903,25 @@ namespace client.State
             Errors = errors;
         }
 
-        public global::System.String __typename { get; }
+        public global::System.String __typename
+        {
+            get;
+        }
 
-        public global::StrawberryShake.EntityId? Token { get; }
+        public global::StrawberryShake.EntityId? Token
+        {
+            get;
+        }
 
-        public global::System.Boolean? Success { get; }
+        public global::System.Boolean? Success
+        {
+            get;
+        }
 
-        public global::System.Collections.Generic.IReadOnlyList<global::client.State.ErrorData>? Errors { get; }
+        public global::System.Collections.Generic.IReadOnlyList<global::client.State.ErrorData>? Errors
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
@@ -852,11 +934,20 @@ namespace client.State
             Info = info;
         }
 
-        public global::System.String __typename { get; }
+        public global::System.String __typename
+        {
+            get;
+        }
 
-        public global::System.String? Field { get; }
+        public global::System.String? Field
+        {
+            get;
+        }
 
-        public global::System.String? Info { get; }
+        public global::System.String? Info
+        {
+            get;
+        }
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("StrawberryShake", "11.2.2.0")]
