@@ -1,0 +1,18 @@
+query GetAirs{
+  airs{
+    nodes{
+      id
+      bortNumber
+      model
+      date_create
+      lifeTime
+      isActive
+      seats
+      sotrudnik{
+        last_name
+        name
+        sur_name
+      }
+    }
+  }
+}

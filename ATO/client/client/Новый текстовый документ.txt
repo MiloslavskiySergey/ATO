@@ -1,0 +1,9 @@
+mutation SignUp{
+  signUp(emailqwe@qwe, passwordQwe123){
+    success
+    errors{
+      field
+      info
+    }
+  }
+}

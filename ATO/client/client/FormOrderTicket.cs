@@ -31,28 +31,28 @@ namespace client
 
 		private async void btnBuyTicket_Click(object sender, EventArgs e)
 		{
-			var driverId = await AddOrder(txtMesto.Text,
+			/*var driverId = await AddOrder(txtMesto.Text,
 				Convert.ToInt32(txtCount.Text),
 				Convert.ToInt32(txtNumRoute.Text),
 				dateTimePicker1.Value,
 				txtStart.Text,
 				txtTarget.Text,
 				cmbTypeTicket.Text/*,
-				Convert.ToDecimal(txtPrice.Text)*/);
+				Convert.ToDecimal(txtPrice.Text));*/
 
 		}
 
-		private async Task<bool> AddOrder(string mesto,	int counts,	int airId, DateTime dateStart,
+		/*private async Task<bool> AddOrder(string mesto, int counts, int airId, DateTime dateStart,
 			//DateTime timeStart, 
 			string start,
 			string target,
 			string name
-			/*Decimal price*/)
-		{
+			/*Decimal price)*/
+		/*{
 			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
-			var res = await client.AddOrder.ExecuteAsync(mesto, counts, airId, dateStart, start, target, name /*, price*/).ConfigureAwait(true);
-			return res.Errors.Count == 0;
-		}
+			var res = await client.AddOrder.ExecuteAsync(mesto, counts, airId, dateStart, start, target, name /*, price).ConfigureAwait(true);
+		/*	return res.Errors.Count == 0;
+		}*/
 
 	}
 }

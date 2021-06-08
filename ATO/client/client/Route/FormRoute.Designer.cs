@@ -31,6 +31,11 @@ namespace client
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRoute));
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnDeleteRoute = new System.Windows.Forms.Button();
@@ -47,6 +52,11 @@ namespace client
 			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.start = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.target = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +70,7 @@ namespace client
 			this.panel1.Controls.Add(this.btnEditRoute);
 			this.panel1.Location = new System.Drawing.Point(12, 12);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(776, 64);
+			this.panel1.Size = new System.Drawing.Size(855, 64);
 			this.panel1.TabIndex = 0;
 			// 
 			// btnCancel
@@ -188,17 +198,63 @@ namespace client
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.number,
+            this.start,
+            this.target,
+            this.time,
+            this.price});
 			this.dataGridView1.Location = new System.Drawing.Point(227, 82);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowTemplate.Height = 25;
-			this.dataGridView1.Size = new System.Drawing.Size(561, 279);
+			this.dataGridView1.Size = new System.Drawing.Size(640, 279);
 			this.dataGridView1.TabIndex = 2;
+			// 
+			// number
+			// 
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.number.DefaultCellStyle = dataGridViewCellStyle1;
+			this.number.HeaderText = "№";
+			this.number.Name = "number";
+			this.number.Width = 40;
+			// 
+			// start
+			// 
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.start.DefaultCellStyle = dataGridViewCellStyle2;
+			this.start.HeaderText = "Место отправления";
+			this.start.Name = "start";
+			this.start.Width = 150;
+			// 
+			// target
+			// 
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.target.DefaultCellStyle = dataGridViewCellStyle3;
+			this.target.HeaderText = "Конечный пункт";
+			this.target.Name = "target";
+			this.target.Width = 135;
+			// 
+			// time
+			// 
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.time.DefaultCellStyle = dataGridViewCellStyle4;
+			this.time.HeaderText = "Время полёта";
+			this.time.Name = "time";
+			this.time.Width = 135;
+			// 
+			// price
+			// 
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.price.DefaultCellStyle = dataGridViewCellStyle5;
+			this.price.HeaderText = "Цена за рейс";
+			this.price.Name = "price";
+			this.price.Width = 135;
 			// 
 			// FormRoute
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 383);
+			this.ClientSize = new System.Drawing.Size(878, 383);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel1);
@@ -234,5 +290,10 @@ namespace client
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.ToolTip toolTip;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
+		private System.Windows.Forms.DataGridViewTextBoxColumn start;
+		private System.Windows.Forms.DataGridViewTextBoxColumn target;
+		private System.Windows.Forms.DataGridViewTextBoxColumn time;
+		private System.Windows.Forms.DataGridViewTextBoxColumn price;
 	}
 }

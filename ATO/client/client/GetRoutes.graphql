@@ -1,0 +1,11 @@
+query GetRoutes{
+  routes{
+    nodes{
+      id
+      start
+      target
+      time
+      price
+    }
+  }
+}

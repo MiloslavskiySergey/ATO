@@ -1,4 +1,5 @@
 ﻿using client.Flight;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace client
 			formFlight.Close();
 		}
 
-		private void FormFlight_Load(object sender, EventArgs e)
+		private async void FormFlight_Load(object sender, EventArgs e)
 		{
 			toolTip.SetToolTip(this.btnAddFlight, "Добавить авиалайнер");
 			toolTip.SetToolTip(this.btnEditFlight, "Изменить информацию о авиалайнере");
@@ -35,6 +36,23 @@ namespace client
 			toolTip.SetToolTip(this.btnCancel, "Вернуться назад");
 			toolTip.SetToolTip(this.btnSearch, "Поиск клиента");
 			toolTip.SetToolTip(this.btnClearSearch, "Сброс поиска");
+			
+			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
+			var data = (await client.GetAirs.ExecuteAsync().ConfigureAwait(true))?.Data?.Airs;
+			foreach (var air in data?.Nodes ?? Array.Empty<IGetAirs_Airs_Nodes>())
+			{
+				dataGridView1.Rows.Add(new object[] { air.Id,
+					air.BortNumber, 
+					air.Model, 
+					air.Sotrudnik.Last_name,
+					air.Sotrudnik.Name,
+					air.Sotrudnik.Sur_name,
+					air.Date_create,
+					air.LifeTime,
+					air.IsActive,
+					air.Seats
+				});
+			}
 		}
 
 		private void btnAddFlight_Click(object sender, EventArgs e)

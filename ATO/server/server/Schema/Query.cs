@@ -101,7 +101,7 @@ namespace server.Schema
 		[UseFiltering]
 		//sorting
 		public async Task<IQueryable<Route>> GetRoutes([Service] IIdentityService identity,
-			[Service] Enforcer enforcer,
+			//[Service] Enforcer enforcer,
 			[ScopedService] ApplicationDbContext context)
 		{
 			//var user = await identity.GetCurrentUser();
