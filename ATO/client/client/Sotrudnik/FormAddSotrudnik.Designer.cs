@@ -171,6 +171,7 @@ namespace client.Sotrudnik
 			this.btnAddSotrudnik.Size = new System.Drawing.Size(50, 50);
 			this.btnAddSotrudnik.TabIndex = 14;
 			this.btnAddSotrudnik.UseVisualStyleBackColor = true;
+			this.btnAddSotrudnik.Click += new System.EventHandler(this.btnAddSotrudnik_Click);
 			// 
 			// btnCancel
 			// 

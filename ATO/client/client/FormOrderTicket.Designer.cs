@@ -64,6 +64,9 @@ namespace client
 			this.btnSearchFlight = new System.Windows.Forms.Button();
 			this.btnBuyTicket = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.txtFlightId = new System.Windows.Forms.TextBox();
+			this.txtClientId = new System.Windows.Forms.TextBox();
+			this.txtCardId = new System.Windows.Forms.TextBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -391,11 +394,35 @@ namespace client
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
+			// txtFlightId
+			// 
+			this.txtFlightId.Location = new System.Drawing.Point(499, 250);
+			this.txtFlightId.Name = "txtFlightId";
+			this.txtFlightId.Size = new System.Drawing.Size(100, 23);
+			this.txtFlightId.TabIndex = 22;
+			// 
+			// txtClientId
+			// 
+			this.txtClientId.Location = new System.Drawing.Point(499, 279);
+			this.txtClientId.Name = "txtClientId";
+			this.txtClientId.Size = new System.Drawing.Size(100, 23);
+			this.txtClientId.TabIndex = 23;
+			// 
+			// txtCardId
+			// 
+			this.txtCardId.Location = new System.Drawing.Point(499, 308);
+			this.txtCardId.Name = "txtCardId";
+			this.txtCardId.Size = new System.Drawing.Size(100, 23);
+			this.txtCardId.TabIndex = 24;
+			// 
 			// FormOrderTicket
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(665, 473);
+			this.Controls.Add(this.txtCardId);
+			this.Controls.Add(this.txtClientId);
+			this.Controls.Add(this.txtFlightId);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnBuyTicket);
 			this.Controls.Add(this.btnSearchFlight);
@@ -456,5 +483,8 @@ namespace client
 		private System.Windows.Forms.TextBox txtMesto;
 		private System.Windows.Forms.ComboBox cmbStart;
 		private System.Windows.Forms.ComboBox cmbTarget;
+		private System.Windows.Forms.TextBox txtFlightId;
+		private System.Windows.Forms.TextBox txtClientId;
+		private System.Windows.Forms.TextBox txtCardId;
 	}
 }

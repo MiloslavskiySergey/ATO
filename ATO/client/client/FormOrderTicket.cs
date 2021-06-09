@@ -31,31 +31,50 @@ namespace client
 
 		private async void btnBuyTicket_Click(object sender, EventArgs e)
 		{
-			/*var driverId = await AddOrder(txtMesto.Text,
+			var driverId = await AddOrder(
+				txtMesto.Text,
 				Convert.ToInt32(txtCount.Text),
-				Convert.ToInt32(txtNumRoute.Text),
-				dateTimePicker1.Value,
-				cmbStart.Text,
-				cmbTarget.Text,
-				cmbTypeTicket.Text,
-				Convert.ToDecimal(txtPrice.Text));
-			*/
+				Convert.ToInt32(txtFlightId.Text),
+				Convert.ToInt32(txtClientId.Text),
+				Convert.ToInt32(txtCardId.Text)
+				//Convert.ToInt32(txtNumRoute.Text),
+				//dateTimePicker1.Value,
+				//cmbStart.Text,
+				//cmbTarget.Text,
+				//cmbTypeTicket.Text,
+				//Convert.ToDecimal(txtPrice.Text)
+				);
+
+			MessageBox.Show("Операция произошла");
+
+			Close();
+
 		}
 
-		/*private async Task<bool> AddOrder(string mesto, 
-			int counts, 
-		    int airId, 
-		    DateTime dateStart,
+		private async Task<bool> AddOrder(
+			string mesto,
+			int counts,
+			int flightId,
+			int clientId,
+			int cardId
+			//int airId, 
+			//DateTime dateStart,
 			//DateTime timeStart, 
-			string start,
-			string target,
-			string name,
-			Decimal price)
+			//string start,
+			//string target,
+			//string name,
+			//Decimal price
+			)
 		{
 			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
-			var res = await client.AddOrder.ExecuteAsync(mesto, counts, airId, dateStart, start, target, name, price).ConfigureAwait(true);
+			var res = await client.AddOrder.ExecuteAsync(
+				mesto, 
+				counts, 
+				flightId, 
+				clientId, 
+				cardId).ConfigureAwait(true);
 			return res.Errors.Count == 0;
-		}*/
+		}
 
 	}
 }

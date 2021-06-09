@@ -1,5 +1,5 @@
-mutation AddOrder($mesto:String!, $counts:Int!, $airId:Int!, $dateStart:DateTime!, $timeStart:DateTime!, $start:String!, $target:String!, $name:String!, $price:Decimal!, $Percent:Decimal!){
-  addOrder(mesto:$mesto, counts:$counts, airId:$airId, dateStart:$dateStart, timeStart:$timeStart, start:$start, target:$target, name:$name, price:$price, percent:$Percent){
+mutation AddOrder($mesto:String!, $counts:Int!, $flightId:Int!, $clientId:Int!, $cardId:Int!){
+  addOrder(mesto:$mesto, counts:$counts, flightId:$flightId, clientId:$clientId, cardId:$cardId){
     success
     errors{
       field

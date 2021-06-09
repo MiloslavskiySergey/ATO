@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="server.Models.Air" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAABAQAAQAAAAEgAAAQAAAAAAAAAgAAgAAAAAAAA=</HashCode>
+      <FileName>Models\Air.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Card" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Client" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAQEAAAAAAAAAAAEAAQAAAAAAAAAAAAAIAAAAIg=</HashCode>
+      <FileName>Models\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Flight" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAECAAAABAAAAAAAEUAAAAAAAAAAAAAAAAQAAAAAIAA=</HashCode>
+      <FileName>Models\Flight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Order" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAAAAAAACgAAAAAQAAABAAAAAAAAAAAgAgAQ=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Route" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAASAQAAAAAAAAACAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Sotrudnik" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAEAAAAAAAAAAAAAAQACAAAAAAAAAhAIAAAAAA=</HashCode>
+      <FileName>Models\Sotrudnik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.Token" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACADAAAAQAAACAAAACAAAAAAEAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Token.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.User" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="server.Models.TokenSettings" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\TokenSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

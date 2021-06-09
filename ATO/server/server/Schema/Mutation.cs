@@ -60,19 +60,31 @@ namespace server.Schema
 		public async Task<Payload> AddOrder([ScopedService] ApplicationDbContext context, 
             string mesto,
             int counts,
-            int airId,
-            DateTime dateStart,
+            //int airId,
+            int flightId,
+            int clientId,
+            int cardId
+           /* DateTime dateStart,
             DateTime timeStart,
             string start,
             string target,
             string name,
             decimal price, 
-            decimal Percent)
+            decimal Percent,
+            string lastName*/)
 		{
             var order = new Order()
             {
                 Mesto = mesto,
                 Counts = counts,
+                FlightId = flightId,
+                ClientId = clientId,
+                CardId = cardId
+               /* Client = new()
+				{
+                    LastName = lastName
+                    
+                },
                 Flight = new()
                 {
                     AirId = airId,
@@ -90,7 +102,7 @@ namespace server.Schema
                 {
                     Name = name,
                     Percent = Percent
-                }
+                }*/
             };
             await context.Orders.AddAsync(order);
 			await context.SaveChangesAsync();
@@ -112,6 +124,58 @@ namespace server.Schema
             await context.SaveChangesAsync();
             return new Payload();
         }
+
+        [UseDbContext(typeof(ApplicationDbContext))]
+        public async Task<Payload> AddAir([ScopedService] ApplicationDbContext context,
+            string bortNumber, 
+            string models, 
+            int lifeTime,
+            int seats,
+            DateTime dateCreate,
+            bool isActive,
+            int sotrudnikId
+            )
+        {
+            var air = new Air()
+            {
+                BortNumber = bortNumber,
+                Model = models,
+                LifeTime = lifeTime,
+                Seats = seats,
+                Date_create = dateCreate,
+                IsActive = isActive,
+                SotrudnikId = sotrudnikId
+            };
+
+            await context.Airs.AddAsync(air);
+            await context.SaveChangesAsync();
+            return new Payload();
+        }
+
+        [UseDbContext(typeof(ApplicationDbContext))]
+        public async Task<Payload> AddSotrudnik([ScopedService] ApplicationDbContext context,
+        string lastName,
+        string name,
+        string surName,
+        string addres,
+        string phone,
+        int stage
+        )
+        {
+            var sotrudnik = new Sotrudnik()
+            {
+                Last_name = lastName,
+                Name = name,
+                Sur_name = surName,
+                Addres = addres,
+                Phone = phone,
+                Stage = stage
+            };
+
+            await context.Sotrudniks.AddAsync(sotrudnik);
+            await context.SaveChangesAsync();
+            return new Payload();
+         }
 
     }
 }

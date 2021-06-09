@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <GraphQL Remove="AddAir.graphql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="icon\" />
   </ItemGroup>
 

@@ -19,8 +19,10 @@ type Mutation {
   signIn(email: String! password: String!): LoginPayload!
   signOut: Payload!
   refreshToken(refreshToken: String!): LoginPayload!
-  addOrder(mesto: String! counts: Int! airId: Int! dateStart: DateTime! timeStart: DateTime! start: String! target: String! name: String! price: Decimal! percent: Decimal!): Payload!
+  addOrder(mesto: String! counts: Int! flightId: Int! clientId: Int! cardId: Int!): Payload!
   addRoute(start: String! target: String! time: Int! price: Decimal!): Payload!
+  addAir(bortNumber: String! models: String! lifeTime: Int! seats: Int! dateCreate: DateTime! isActive: Boolean! sotrudnikId: Int!): Payload!
+  addSotrudnik(lastName: String! name: String! surName: String! addres: String! phone: String! stage: Int!): Payload!
 }
 
 type Air {
@@ -444,11 +446,11 @@ type LoginPayload {
   errors: [Error!]
 }
 
-"The `DateTime` scalar represents an ISO-8601 compliant date time type."
-scalar DateTime
-
 "The built-in `Decimal` scalar type."
 scalar Decimal
+
+"The `DateTime` scalar represents an ISO-8601 compliant date time type."
+scalar DateTime
 
 type Token {
   id: Int!
