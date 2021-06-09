@@ -177,5 +177,22 @@ namespace server.Schema
             return new Payload();
          }
 
+        [UseDbContext(typeof(ApplicationDbContext))]
+        public async Task<Payload> DelRoute([ScopedService] ApplicationDbContext context, int id, string start, string target, int time, decimal price)
+        {
+            var route = new Route()
+            {
+                Id = id,
+                Start = start,
+                Target = target,
+                Time = time,
+                Price = price
+            };
+
+            await context.Routes.AddAsync(route);
+            await context.SaveChangesAsync();
+            return new Payload();
+        }
+
     }
 }

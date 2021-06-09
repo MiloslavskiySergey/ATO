@@ -23,6 +23,7 @@ type Mutation {
   addRoute(start: String! target: String! time: Int! price: Decimal!): Payload!
   addAir(bortNumber: String! models: String! lifeTime: Int! seats: Int! dateCreate: DateTime! isActive: Boolean! sotrudnikId: Int!): Payload!
   addSotrudnik(lastName: String! name: String! surName: String! addres: String! phone: String! stage: Int!): Payload!
+  delRoute(id: Int! start: String! target: String! time: Int! price: Decimal!): Payload!
 }
 
 type Air {
