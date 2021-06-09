@@ -39,7 +39,7 @@ namespace client
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.txtStart = new System.Windows.Forms.TextBox();
 			this.txtTarget = new System.Windows.Forms.TextBox();
-			this.txtPlace = new System.Windows.Forms.TextBox();
+			this.txtPrice = new System.Windows.Forms.TextBox();
 			this.txtTime = new System.Windows.Forms.TextBox();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
@@ -114,12 +114,12 @@ namespace client
 			this.txtTarget.Size = new System.Drawing.Size(192, 23);
 			this.txtTarget.TabIndex = 7;
 			// 
-			// txtPlace
+			// txtPrice
 			// 
-			this.txtPlace.Location = new System.Drawing.Point(169, 86);
-			this.txtPlace.Name = "txtPlace";
-			this.txtPlace.Size = new System.Drawing.Size(192, 23);
-			this.txtPlace.TabIndex = 8;
+			this.txtPrice.Location = new System.Drawing.Point(169, 86);
+			this.txtPrice.Name = "txtPrice";
+			this.txtPrice.Size = new System.Drawing.Size(192, 23);
+			this.txtPrice.TabIndex = 8;
 			// 
 			// txtTime
 			// 
@@ -139,7 +139,7 @@ namespace client
 			this.Controls.Add(this.txtStart);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.txtTime);
-			this.Controls.Add(this.txtPlace);
+			this.Controls.Add(this.txtPrice);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.txtTarget);
 			this.Controls.Add(this.btnAddRoute);
@@ -164,7 +164,7 @@ namespace client
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.TextBox txtStart;
 		private System.Windows.Forms.TextBox txtTarget;
-		private System.Windows.Forms.TextBox txtPlace;
+		private System.Windows.Forms.TextBox txtPrice;
 		private System.Windows.Forms.TextBox txtTime;
 		private System.Windows.Forms.ToolTip toolTip;
 	}

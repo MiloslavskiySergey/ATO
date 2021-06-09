@@ -19,7 +19,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormFlight_FormClosed(object sender, FormClosedEventArgs e)
@@ -58,13 +58,13 @@ namespace client
 		private void btnAddFlight_Click(object sender, EventArgs e)
 		{
 			FormAddFlight formAddFlight = new FormAddFlight();
-			formAddFlight.Show();
+			formAddFlight.ShowDialog();
 		}
 
 		private void btnEditFlight_Click(object sender, EventArgs e)
 		{
 			FormEditFlight formEditFlight = new FormEditFlight();
-			formEditFlight.Show();
+			formEditFlight.ShowDialog();
 		}
 	}
 }

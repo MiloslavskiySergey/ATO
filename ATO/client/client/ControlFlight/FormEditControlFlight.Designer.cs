@@ -64,6 +64,7 @@ namespace client.ControlFlight
 			this.btnSaveControlFlight.Size = new System.Drawing.Size(50, 50);
 			this.btnSaveControlFlight.TabIndex = 46;
 			this.btnSaveControlFlight.UseVisualStyleBackColor = true;
+			this.btnSaveControlFlight.Click += new System.EventHandler(this.btnSaveControlFlight_Click);
 			// 
 			// txtTimeStart
 			// 

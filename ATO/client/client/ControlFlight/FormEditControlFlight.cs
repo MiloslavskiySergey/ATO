@@ -23,13 +23,18 @@ namespace client.ControlFlight
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormEditControlFlight_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			FormEditControlFlight formEditControlFlight = new FormEditControlFlight();
 			formEditControlFlight.Close();
+		}
+
+		private void btnSaveControlFlight_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

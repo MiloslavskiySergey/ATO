@@ -17,12 +17,12 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void btnSaveRoute_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormEditRoute_FormClosed(object sender, FormClosedEventArgs e)

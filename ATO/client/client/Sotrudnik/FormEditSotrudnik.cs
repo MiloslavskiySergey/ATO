@@ -17,7 +17,7 @@ namespace client.Sotrudnik
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormEditSotrudnik_Load(object sender, EventArgs e)

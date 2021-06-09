@@ -57,11 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAdVJREFUaEPtmEFuwjAURK1W6oqTREqyKGHbQq8EPVSXcJKS3gQ2sCB4rB/qhPzg
+        vwAADr8BOAVTJAAAAdVJREFUaEPtmEFuwjAURK1W6oqTREqyKGHbQq8EPVSXcJKS3gQ2sCB4rB/qhPzg
         OnZiqX6SJaCuO2M/0cgiEolEIpF/xU+SvFRCPNFbZ2DNSq5Nb/0gw8/2abot03TjsgTWOi7n68Nyvqve
         khl97JY6/D7LLnKcyyxb048Gg/DHVXE6fiyqw7LYOi8BberwZZ5XGOq1LPElxDNN+zO3nV8VF4RXBeRr
         dRIudcIfgjZq56kAlTjb6kThN/XOawXO+NxmzV5UCbnj+incSljopGvTGDL8kFN9CJVon4SxTrTzDW0w

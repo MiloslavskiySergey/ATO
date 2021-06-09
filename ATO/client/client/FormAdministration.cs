@@ -17,9 +17,9 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			Hide();
 			FormMain formMain = new FormMain();
-			formMain.Show();
+			formMain.ShowDialog();
 		}
 
 		private void FormAdministration_FormClosed(object sender, FormClosedEventArgs e)
@@ -31,42 +31,42 @@ namespace client
 		{
 			//this.Hide();
 			FormRoute formRoute = new FormRoute();
-			formRoute.Show();
+			formRoute.ShowDialog();
 		}
 
 		private void btnFlight_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormFlight formFlight = new FormFlight();
-			formFlight.Show();
+			formFlight.ShowDialog();
 		}
 
 		private void btnSotrudnik_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormSotrudnik formSotrudnik = new FormSotrudnik();
-			formSotrudnik.Show();
+			formSotrudnik.ShowDialog();
 		}
 
 		private void btnClient_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormClient formClient = new FormClient();
-			formClient.Show();
+			formClient.ShowDialog();
 		}
 
 		private void btnControlFlight_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormControlFlight formControlFlight = new FormControlFlight();
-			formControlFlight.Show();
+			formControlFlight.ShowDialog();
 		}
 
 		private void btnSellTicket_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormSellTicket formSellTicket = new FormSellTicket();
-			formSellTicket.Show();
+			formSellTicket.ShowDialog();
 		}
 
 		private void FormAdministration_Load(object sender, EventArgs e)

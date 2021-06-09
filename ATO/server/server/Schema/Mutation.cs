@@ -58,8 +58,8 @@ namespace server.Schema
 
 		[UseDbContext(typeof(ApplicationDbContext))]
 		public async Task<Payload> AddOrder([ScopedService] ApplicationDbContext context, 
-            string mesto, 
-            int counts, 
+            string mesto,
+            int counts,
             int airId,
             DateTime dateStart,
             DateTime timeStart,
@@ -86,15 +86,32 @@ namespace server.Schema
                     },
 
                 },
-                Card = new() 
-                { 
-                    Name = name, 
-                    Percent = Percent 
+                Card = new()
+                {
+                    Name = name,
+                    Percent = Percent
                 }
             };
             await context.Orders.AddAsync(order);
-            //await context.Orders.SaveChangesAsync();
+			await context.SaveChangesAsync();
             return new Payload();
         }
-	}
+
+        [UseDbContext(typeof(ApplicationDbContext))]
+        public async Task<Payload> AddRoute([ScopedService] ApplicationDbContext context, string start, string target, int time, decimal price)
+		{
+            var route = new Route()
+            {
+                Start = start,
+                Target = target,
+                Time = time,
+                Price = price
+            };
+
+            await context.Routes.AddAsync(route);
+            await context.SaveChangesAsync();
+            return new Payload();
+        }
+
+    }
 }

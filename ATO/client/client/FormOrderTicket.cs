@@ -19,7 +19,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormOrderTicket_FormClosed(object sender, FormClosedEventArgs e)
@@ -35,23 +35,26 @@ namespace client
 				Convert.ToInt32(txtCount.Text),
 				Convert.ToInt32(txtNumRoute.Text),
 				dateTimePicker1.Value,
-				txtStart.Text,
-				txtTarget.Text,
-				cmbTypeTicket.Text/*,
-				Convert.ToDecimal(txtPrice.Text));*/
-
+				cmbStart.Text,
+				cmbTarget.Text,
+				cmbTypeTicket.Text,
+				Convert.ToDecimal(txtPrice.Text));
+			*/
 		}
 
-		/*private async Task<bool> AddOrder(string mesto, int counts, int airId, DateTime dateStart,
+		/*private async Task<bool> AddOrder(string mesto, 
+			int counts, 
+		    int airId, 
+		    DateTime dateStart,
 			//DateTime timeStart, 
 			string start,
 			string target,
-			string name
-			/*Decimal price)*/
-		/*{
+			string name,
+			Decimal price)
+		{
 			var client = Program.ServiceProvider.GetRequiredService<IGqlClient>();
-			var res = await client.AddOrder.ExecuteAsync(mesto, counts, airId, dateStart, start, target, name /*, price).ConfigureAwait(true);
-		/*	return res.Errors.Count == 0;
+			var res = await client.AddOrder.ExecuteAsync(mesto, counts, airId, dateStart, start, target, name, price).ConfigureAwait(true);
+			return res.Errors.Count == 0;
 		}*/
 
 	}

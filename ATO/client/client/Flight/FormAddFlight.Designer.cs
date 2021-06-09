@@ -173,6 +173,7 @@ namespace client.Flight
 			this.btnAddFlight.Size = new System.Drawing.Size(50, 50);
 			this.btnAddFlight.TabIndex = 14;
 			this.btnAddFlight.UseVisualStyleBackColor = true;
+			this.btnAddFlight.Click += new System.EventHandler(this.btnAddFlight_Click);
 			// 
 			// btnCancel
 			// 

@@ -18,7 +18,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormClient_FormClosed(object sender, FormClosedEventArgs e)

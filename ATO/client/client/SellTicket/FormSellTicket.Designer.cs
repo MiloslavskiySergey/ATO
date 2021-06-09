@@ -69,6 +69,7 @@ namespace client
 			this.btnAddSellTicket.Size = new System.Drawing.Size(50, 50);
 			this.btnAddSellTicket.TabIndex = 1;
 			this.btnAddSellTicket.UseVisualStyleBackColor = true;
+			this.btnAddSellTicket.Click += new System.EventHandler(this.btnAddSellTicket_Click);
 			// 
 			// panel1
 			// 

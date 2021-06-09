@@ -39,6 +39,8 @@ namespace client
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.cmbStart = new System.Windows.Forms.ComboBox();
+			this.cmbTarget = new System.Windows.Forms.ComboBox();
 			this.txtMesto = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.txtCount = new System.Windows.Forms.TextBox();
@@ -62,8 +64,6 @@ namespace client
 			this.btnSearchFlight = new System.Windows.Forms.Button();
 			this.btnBuyTicket = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			this.cmbStart = new System.Windows.Forms.ComboBox();
-			this.cmbTarget = new System.Windows.Forms.ComboBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -154,6 +154,28 @@ namespace client
 			this.groupBox1.TabIndex = 16;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Поиск подходящего рейса:";
+			// 
+			// cmbStart
+			// 
+			this.cmbStart.FormattingEnabled = true;
+			this.cmbStart.Items.AddRange(new object[] {
+            "Москва"});
+			this.cmbStart.Location = new System.Drawing.Point(141, 26);
+			this.cmbStart.Name = "cmbStart";
+			this.cmbStart.Size = new System.Drawing.Size(172, 23);
+			this.cmbStart.TabIndex = 22;
+			// 
+			// cmbTarget
+			// 
+			this.cmbTarget.FormattingEnabled = true;
+			this.cmbTarget.Items.AddRange(new object[] {
+            "Санкт-Петербург",
+            "Сочи",
+            "Ростов-на-Дону"});
+			this.cmbTarget.Location = new System.Drawing.Point(141, 55);
+			this.cmbTarget.Name = "cmbTarget";
+			this.cmbTarget.Size = new System.Drawing.Size(172, 23);
+			this.cmbTarget.TabIndex = 23;
 			// 
 			// txtMesto
 			// 
@@ -368,22 +390,6 @@ namespace client
 			this.btnCancel.Text = "Отмена";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-			// 
-			// cmbStart
-			// 
-			this.cmbStart.FormattingEnabled = true;
-			this.cmbStart.Location = new System.Drawing.Point(141, 26);
-			this.cmbStart.Name = "cmbStart";
-			this.cmbStart.Size = new System.Drawing.Size(172, 23);
-			this.cmbStart.TabIndex = 22;
-			// 
-			// cmbTarget
-			// 
-			this.cmbTarget.FormattingEnabled = true;
-			this.cmbTarget.Location = new System.Drawing.Point(141, 55);
-			this.cmbTarget.Name = "cmbTarget";
-			this.cmbTarget.Size = new System.Drawing.Size(172, 23);
-			this.cmbTarget.TabIndex = 23;
 			// 
 			// FormOrderTicket
 			// 

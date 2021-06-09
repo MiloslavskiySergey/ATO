@@ -18,7 +18,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 			/*
 			this.Hide();
 			FormAdministration formAdministration = new FormAdministration();
@@ -37,14 +37,14 @@ namespace client
 		{
 			//this.Hide();
 			FormAddRoute formAddRoute = new FormAddRoute();
-			formAddRoute.Show();
+			formAddRoute.ShowDialog();
 		}
 
 		private void btnEditRoute_Click(object sender, EventArgs e)
 		{
 			//this.Hide();
 			FormEditRoute formEditRoute = new FormEditRoute();
-			formEditRoute.Show();
+			formEditRoute.ShowDialog();
 		}
 
 		private async void FormRoute_Load(object sender, EventArgs e)

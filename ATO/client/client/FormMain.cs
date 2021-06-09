@@ -25,7 +25,7 @@ namespace client
 		{
 			//this.Hide();
 			FormOrderTicket formOrderTicket = new FormOrderTicket();
-			formOrderTicket.Show();
+			formOrderTicket.ShowDialog();
 		}
 
 		private void btnAdministration_Click(object sender, EventArgs e)

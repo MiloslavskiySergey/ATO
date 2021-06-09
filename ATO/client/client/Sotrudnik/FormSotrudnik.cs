@@ -19,7 +19,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormSotrudnik_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,13 +55,13 @@ namespace client
 		private void btnAddSotrudnik_Click(object sender, EventArgs e)
 		{
 			FormAddSotrudnik formAddSotrudnik = new FormAddSotrudnik();
-			formAddSotrudnik.Show();
+			formAddSotrudnik.ShowDialog();
 		}
 
 		private void btnEditSotrudnik_Click(object sender, EventArgs e)
 		{
 			FormEditSotrudnik formEditSotrudnik = new FormEditSotrudnik();
-			formEditSotrudnik.Show();
+			formEditSotrudnik.ShowDialog();
 		}
 	}
 }

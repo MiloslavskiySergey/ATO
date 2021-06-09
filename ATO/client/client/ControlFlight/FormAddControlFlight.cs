@@ -15,10 +15,6 @@ namespace client
 			InitializeComponent();
 		}
 
-		private void FormAddControlFlight_Load(object sender, EventArgs e)
-		{
-
-		}
 
 		private void btnAddControlFlight_Click(object sender, EventArgs e)
 		{
@@ -34,7 +30,12 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
+		}
+
+		private void FormAddControlFlight_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

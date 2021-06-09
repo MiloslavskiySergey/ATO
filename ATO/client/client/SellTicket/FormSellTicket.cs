@@ -18,7 +18,7 @@ namespace client
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormSellTicket_FormClosed(object sender, FormClosedEventArgs e)
@@ -53,6 +53,11 @@ namespace client
 				order.Flight.Route.Price
 				});
 			}
+		}
+
+		private void btnAddSellTicket_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

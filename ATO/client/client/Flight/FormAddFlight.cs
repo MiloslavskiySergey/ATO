@@ -17,7 +17,7 @@ namespace client.Flight
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormAddFlight_Load(object sender, EventArgs e)
@@ -30,6 +30,11 @@ namespace client.Flight
 		{
 			FormAddFlight formAddFlight = new FormAddFlight();
 			formAddFlight.Close();
+		}
+
+		private void btnAddFlight_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

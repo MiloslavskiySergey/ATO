@@ -22,9 +22,9 @@ namespace client
 
 		private void btnCreateUser_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			Hide();
 			FormAvtorization formAvtorization = new FormAvtorization();
-			formAvtorization.Show();
+			formAvtorization.ShowDialog();
 		}
 	}
 }

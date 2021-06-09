@@ -1,0 +1,9 @@
+mutation AddRoute($start:String!,$target:String!, $time:Int!, $price:Decimal!){
+  addRoute(start:$start, target:$target, time:$time, price:$price){
+    success
+    errors{
+      field
+      info
+    }
+  }
+}

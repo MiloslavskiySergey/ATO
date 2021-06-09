@@ -17,7 +17,7 @@ namespace client.Flight
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Close();
 		}
 
 		private void FormEditFlight_Load(object sender, EventArgs e)

@@ -20,6 +20,7 @@ type Mutation {
   signOut: Payload!
   refreshToken(refreshToken: String!): LoginPayload!
   addOrder(mesto: String! counts: Int! airId: Int! dateStart: DateTime! timeStart: DateTime! start: String! target: String! name: String! price: Decimal! percent: Decimal!): Payload!
+  addRoute(start: String! target: String! time: Int! price: Decimal!): Payload!
 }
 
 type Air {
