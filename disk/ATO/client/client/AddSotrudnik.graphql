@@ -1,0 +1,9 @@
+mutation AddSotrudnik($lastName:String!, $name:String! $surName:String!, $addres:String!, $phone:String!, $stage:Int!){
+  addSotrudnik(lastName:$lastName, name:$name, surName:$surName, addres:$addres, phone:$phone, stage:$stage){
+    success
+    errors{
+      field
+      info
+    }
+  }
+}

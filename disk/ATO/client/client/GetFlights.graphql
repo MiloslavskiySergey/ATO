@@ -1,0 +1,18 @@
+query GetFlights{
+  flights{
+    nodes{
+      id
+      dateStart
+      timeStart
+      isActive
+      route{
+        start
+        target
+        time
+      }
+      air{
+        seats
+      }
+    }
+  }
+}

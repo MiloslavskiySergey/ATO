@@ -1,0 +1,9 @@
+mutation AddOrder($mesto:String!, $counts:Int!, $flightId:Int!, $clientId:Int!, $cardId:Int!){
+  addOrder(mesto:$mesto, counts:$counts, flightId:$flightId, clientId:$clientId, cardId:$cardId){
+    success
+    errors{
+      field
+      info
+    }
+  }
+}
