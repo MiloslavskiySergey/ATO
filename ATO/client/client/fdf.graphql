@@ -1,9 +1,0 @@
-mutation AddAir($bortNumber:String!, $models:String! $lifeTime:Int!, $seats:Int!, $dateCreate:DateTime!, $isActive:Boolean!, $sotrudnikId:Int!){
-  addAir(bortNumber:$bortNumber, models:$models, lifeTime:$lifeTime, seats:$seats, dateCreate:$dateCreate, isActive:$isActive, sotrudnikId:$sotrudnikId){
-    success
-    errors{
-      field
-      info
-    }
-  }
-}
